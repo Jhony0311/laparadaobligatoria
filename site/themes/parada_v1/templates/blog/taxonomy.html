@@ -1,0 +1,18 @@
+<section class="regular">
+
+    <header>
+        <h1>{{ title }}</h1>
+        <h2>{{ content }}</h2>
+    </header>
+
+    <article class="list">
+        {{ collection:blog taxonomy="true" scope="tag" }}
+            {{ if no_results }}
+                <p>No "{{ segment_3 }}" posts.</p>
+            {{ else }}
+                {{ partial:block }}
+            {{ /if }}
+        {{ /collection:blog }}
+    </article>
+
+</section>

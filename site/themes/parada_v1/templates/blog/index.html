@@ -1,0 +1,14 @@
+<section class="regular">
+
+	<header>
+		<h1>{{ title }}</h1>
+		<h2>{{ content }}</h2>
+	</header>
+
+	<article class="list">
+		{{ entries scope="tag" }}
+			{{ partial:block }}
+		{{ /entries }}
+	</article>
+
+</section>
