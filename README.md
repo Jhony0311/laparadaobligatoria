@@ -1,5 +1,6 @@
 # La Parada Obligatoria
 
+
 Website project builded under [Statamic CMS](https://statamic.com/).
 
 In order to make it work on your local you need to follow the requirement [guide for Statamic](https://docs.statamic.com/guides/getting-started#requirements), then for the installation open bash console on the root of this folder and type
