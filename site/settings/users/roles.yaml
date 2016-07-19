@@ -1,0 +1,19 @@
+d32e14fb-08c9-44c2-aaf8-21200852bafd:
+  title: Admin
+  permissions:
+    - super
+284db8c6-2c51-462d-8b6c-1c4534d7ebf8:
+  title: Editor
+  slug: editor
+  permissions:
+    - cp:access
+    - pages:edit
+    - pages:create
+    - pages:reorder
+    - collections:blog:edit
+    - collections:blog:create
+    - collections:blog:delete
+    - assets:main:edit
+    - assets:main:create
+    - assets:main:delete
+    - forms

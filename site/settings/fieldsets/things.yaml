@@ -1,0 +1,12 @@
+title: Things
+hide: true
+fields:
+  title:
+    type: title
+    display: Title
+  amazon_id:
+    display: Amazon Product ID
+    type: text
+  photo:
+    display: Image URL
+    type: text
