@@ -17,3 +17,11 @@ d32e14fb-08c9-44c2-aaf8-21200852bafd:
     - assets:main:create
     - assets:main:delete
     - forms
+a0ccbcaa-1a3f-4ae4-a43d-aca3a138f71f:
+  title: Author
+  slug: author
+  permissions:
+    - cp:access
+    - collections:blog:edit
+    - collections:blog:create
+    - collections:blog:delete
