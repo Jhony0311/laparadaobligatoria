@@ -1,5 +1,5 @@
 var elixir = require('laravel-elixir');
-var theme = 'styles';
+var theme = 'parada_v1';
 elixir.config.assetsPath = './';
 
 /*
@@ -17,8 +17,8 @@ elixir(function(mix) {
     mix.sass(theme + '.scss', 'css/' + theme + '.css');
 
     mix.scripts([
-        'vendor/collage-plus.js',
-        'vendor/zoom.js',
+        'vendor/device.js',
+        'vendor/modernizr-custom.js',
         'jabbascripts.js'
-    ], './js/main.js');
+    ], './js/' + theme + '.js');
 });
