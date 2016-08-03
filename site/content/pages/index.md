@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Inicio
 template: home
 list:
   - of
