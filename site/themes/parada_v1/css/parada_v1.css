@@ -260,6 +260,13 @@ code {
   text-align: center;
 }
 
+.header {
+  background-color: rgba(255, 0, 0, 0.75);
+  position: fixed;
+  height: 180px;
+  width: 100%;
+}
+
 input.giant {
   font-family: "Lato", sans-serif;
   font-size: 60px;
@@ -299,89 +306,40 @@ input.giant:active {
   opacity: 0;
 }
 
-.navbar-redwood {
-  background: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 0;
-  min-height: 60px;
+.navigation__list {
+  float: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar-redwood .nav {
-  color: #b8b8b8;
-  font-family: "Lato", sans-serif;
-  font-size: 12px;
-  overflow: hidden;
+.navigation__element {
+  float: left;
+  margin-right: 15px;
 }
 
-.navbar-redwood .nav a {
-  color: #b8b8b8;
-  letter-spacing: .1em;
-  margin-left: 32px;
-  padding: 20px 0;
-  text-transform: uppercase;
-  -webkit-backface-visibility: hidden;
+.navigation__element:last-child {
+  margin-right: 0;
 }
 
-.navbar-redwood .nav a:before {
+.navigation__element--active,
+.navigation__element:hover {
+  text-decoration: underline;
+}
+
+.navigation__element--active::after,
+.navigation__element:hover::after {
+  background-color: #fff;
+  border-radius: 50%;
+  content: " ";
+  bottom: -15px;
+  height: 3px;
   position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 100%;
-  height: 2px;
-  background: #b8b8b8;
-  content: '';
-  transition: all 100ms ease;
-  opacity: 0;
+  width: 3px;
 }
 
-.navbar-redwood .nav a:hover,
-.navbar-redwood .nav a:focus {
-  background: transparent;
-}
-
-.navbar-redwood .nav a:hover:before,
-.navbar-redwood .nav a:focus:before {
-  opacity: 1;
-  bottom: 0;
-}
-
-.navbar-redwood .nav .active a {
-  color: #3c3c3c;
-  font-weight: bold;
-  position: relative;
-}
-
-.navbar-redwood .nav .active a:before {
-  bottom: 0;
-  height: 2px;
-  background: #3c3c3c;
-  opacity: 1;
-}
-
-.navbar-redwood .navbar-brand {
-  color: #3c3c3c;
-  font-weight: 900;
-  font-size: 32px;
-  height: 60px;
-  padding: 20px 15px;
-  letter-spacing: -.05em;
-}
-
-.navbar-redwood .navbar-form {
-  margin-top: 13px;
-}
-
-.navbar-redwood .search {
-  border-radius: 32px;
-  font-family: "Lato", sans-serif;
-  font-size: 14px;
-  width: 180px;
-  display: block;
-  transition: width 220ms ease;
-}
-
-.navbar-redwood .search.grow {
-  width: 300px;
+.navigation__link {
+  text-decoration: none;
 }
 
 .tags {

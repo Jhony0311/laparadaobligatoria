@@ -5,8 +5,8 @@
     <nav class="navigation">
         <ul class="navigation__list">
             {{ nav from="/" include_home="true" scope="tag" }}
-                <li class="navigation__element{{ if is_current or is_parent }} active{{ /if }}">
-                    <a href="{{ url }}">{{ tag:nav_title or title }}
+                <li class="navigation__element{{ if is_current or is_parent }} navigation__element--active{{ /if }}">
+                    <a class="navigation__link" href="{{ url }}">{{ tag:nav_title or title }}
                     </a>
                 </li>
             {{ /nav }}
