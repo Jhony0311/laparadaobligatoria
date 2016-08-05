@@ -6,3 +6,10 @@ fields:
     display: Website Name
     instructions: The name of your website
     localizable: true
+  site_logo:
+    type: assets
+    display: site_logo
+    instructions: Insert an image for logo
+    container: main
+    folder: /
+    max_files: 1

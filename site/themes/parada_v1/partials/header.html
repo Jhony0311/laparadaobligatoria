@@ -1,7 +1,7 @@
 <header class="header">
-    <div class="content-wrapper">
+    <div class="header__wrapper content-wrapper">
         <div class="logo" id="logo">
-            {{ assets:images }}<img src="{{ url }}" alt="{{ alt }}" />{{ /assets:images }}
+            {{ assets:site_logo }}<a href="/"><img src="{{ url }}" alt="{{ alt }}" /></a>{{ /assets:site_logo }}
         </div>
         <nav class="navigation">
             {{ nav from="/" include_home="true" scope="tag" }}
