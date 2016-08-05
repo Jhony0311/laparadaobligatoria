@@ -1,17 +1,15 @@
 <header class="header">
-    <div class="logo" id="logo">
-
-    </div>
-    <nav class="navigation">
-        <ul class="navigation__list">
+    <div class="content-wrapper">
+        <div class="logo" id="logo">
+            {{ assets:images }}<img src="{{ url }}" alt="{{ alt }}" />{{ /assets:images }}
+        </div>
+        <nav class="navigation">
             {{ nav from="/" include_home="true" scope="tag" }}
-                <li class="navigation__element{{ if is_current or is_parent }} navigation__element--active{{ /if }}">
-                    <a class="navigation__link" href="{{ url }}">{{ tag:nav_title or title }}
-                    </a>
-                </li>
+            <a class="navigation__link {{ if is_current or is_parent }} navigation__link--active{{ /if }}" href="{{ url }}">{{ tag:nav_title or title }}
+            </a>
             {{ /nav }}
-        </ul>
-    </nav>
+        </nav>
+    </div>
 </header>
 <!-- <nav class="navbar navbar-redwood">
     <div class="container-fluid">

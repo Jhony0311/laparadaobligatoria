@@ -1,6 +1,10 @@
 .header {
-    background-color: rgba($red, .75);
+    background-color: rgba($primaryColor, .75);
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    justify-content: space-between;
     position: fixed;
-    height: 180px;
+    height: 88px;
     width: 100%;
 }

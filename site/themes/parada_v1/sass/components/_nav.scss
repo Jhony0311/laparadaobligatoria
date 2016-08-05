@@ -1,16 +1,6 @@
 .navigation {
-    &__list {
-        float: right;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-    &__element {
-        float: left;
-        margin-right: 15px;
-        &:last-child {
-            margin-right: 0;
-        }
+    &__link {
+        text-decoration: none;
         &--active,
         &:hover {
             text-decoration: underline;
@@ -24,8 +14,5 @@
                 width: 3px;
             }
         }
-    }
-    &__link {
-        text-decoration: none;
     }
 }

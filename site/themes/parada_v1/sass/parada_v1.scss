@@ -1,14 +1,16 @@
+// Vendor
+@import '../node_modules/normalize.css';
 
 // Base
 @import 'base/fonts';
 @import 'base/variables';
+@import 'base/helpers';
+@import 'base/media-queries';
 @import 'base/base';
+@import 'base/classes';
 @import 'base/typography';
 
 @import 'components/header';
 @import 'components/forms';
 @import 'components/gallery';
 @import 'components/nav';
-@import 'components/tags';
-@import 'components/tiles';
-@import 'components/zoom';

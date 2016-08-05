@@ -1,20 +1,8 @@
 body {
-    background: #fff;
-    color: $color_dark;
-    font-family: $font_serif;
+    @include font-style();
+    background: $baseColor;
+    color: $white;
+    font-size-adjust: 0;
     font-size: 18px;
     margin: 0;
-}
-.inline {
-    display: inline;
-}
-.inline-block {
-    display: inline-block;
-}
-.block {
-    display: block;
-}
-.col-centered {
-    float: none;
-    margin: 0 auto;
 }

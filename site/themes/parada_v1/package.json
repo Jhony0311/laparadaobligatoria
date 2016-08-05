@@ -3,5 +3,8 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "laravel-elixir": "^3.2.8"
+  },
+  "dependencies": {
+    "normalize.css": "^4.2.0"
   }
 }
