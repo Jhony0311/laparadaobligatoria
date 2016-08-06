@@ -6,3 +6,8 @@ body {
     font-size: 18px;
     margin: 0;
 }
+#main-content {
+    @include mq($large-up) {
+        min-height: calc(100vh - 400px);
+    }
+}

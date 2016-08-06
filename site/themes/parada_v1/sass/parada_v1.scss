@@ -10,7 +10,9 @@
 @import 'base/classes';
 @import 'base/typography';
 
-@import 'components/header';
 @import 'components/forms';
 @import 'components/gallery';
 @import 'components/nav';
+
+@import 'layout/footer';
+@import 'layout/header';
