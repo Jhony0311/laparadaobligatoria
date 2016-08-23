@@ -1,5 +1,6 @@
 ---
 title: Quienes Somos
+hero_image: 74119dad-5d7d-465a-8140-6b7e6f03a59b
 fun_facts:
   - I grew up in West Virginia but moved to California in the mid 90s
   - My life is about as organized as the $5 DVD bin at Wal-Mart

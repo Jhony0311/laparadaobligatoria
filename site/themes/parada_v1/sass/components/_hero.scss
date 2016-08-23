@@ -1,0 +1,35 @@
+.hero {
+    display: flex;
+    align-items: center;
+    height: 320px;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    &--image {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 0;
+    }
+    &--opacity {
+        background-color: $black;
+        height: 100%;
+        opacity: .75;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    &--title {
+        @include font-style($style: bold);
+        position: relative;
+        margin: 0;
+        z-index: 3;
+    }
+}

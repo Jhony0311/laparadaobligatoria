@@ -105,6 +105,49 @@ h6 {
   width: 5px;
 }
 
+.hero {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 320px;
+  position: relative;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero--image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.hero--opacity {
+  background-color: #000000;
+  height: 100%;
+  opacity: .75;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.hero--title {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  position: relative;
+  margin: 0;
+  z-index: 3;
+}
+
 .recetas-cta__title {
   font-family: "Lato", sans-serif;
   font-weight: 700;
@@ -230,6 +273,7 @@ h6 {
   position: fixed;
   height: 88px;
   width: 100%;
+  z-index: 50;
 }
 
 .header__wrapper {
