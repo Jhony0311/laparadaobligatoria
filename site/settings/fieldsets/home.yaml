@@ -1,13 +1,10 @@
-title: About Page
+title: Home Page
 hide: true
 fields:
   title:
     type: title
     display: Title
     localizable: false
-  subtitle:
-    type: text
-    display: Subtitle
   content:
     type: markdown
     display: Content
@@ -18,3 +15,8 @@ fields:
     container: hero-images
     folder: /
     max_files: 1
+  testimonial_slider:
+    type: collection
+    display: Slider de testimonios
+    max_items: 5
+    collection: testimonios

@@ -1,12 +1,18 @@
-.hero {
+.slider {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.slide {
+    float: left;
+    position: relative;
     display: flex;
     align-items: center;
-    height: 320px;
     position: relative;
     justify-content: center;
     width: 100%;
-    @include mq($large-up) {
-        height: 640px;
+    &--full {
+        width: 100%;
     }
     &__image {
         background-size: cover;
@@ -29,7 +35,7 @@
         width: 100%;
         z-index: 1;
     }
-    &__tt {
+    &__text {
         padding: 0 15px;
         position: relative;
         text-align: center;
@@ -37,15 +43,8 @@
         @include mq($large-up) {
             padding: 0;
         }
-    }
-    &__title {
-        @include font-style($style: title);
-        text-transform: uppercase;
-        margin: 0;
-    }
-    &__subtitle {
-        @include font-style($style: thin);
-        font-size: 20px;
-        margin: 0;
+        &--center {
+
+        }
     }
 }

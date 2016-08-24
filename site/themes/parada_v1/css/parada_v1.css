@@ -117,7 +117,13 @@ h6 {
   width: 100%;
 }
 
-.hero--image {
+@media only screen and (min-width: 64em) {
+  .hero {
+    height: 640px;
+  }
+}
+
+.hero__image {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -129,7 +135,7 @@ h6 {
   z-index: 0;
 }
 
-.hero--opacity {
+.hero__opacity {
   background-color: #000000;
   height: 100%;
   opacity: .75;
@@ -140,12 +146,90 @@ h6 {
   z-index: 1;
 }
 
-.hero--title {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
+.hero__tt {
+  padding: 0 15px;
   position: relative;
-  margin: 0;
+  text-align: center;
   z-index: 3;
+}
+
+@media only screen and (min-width: 64em) {
+  .hero__tt {
+    padding: 0;
+  }
+}
+
+.hero__title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.hero__subtitle {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  margin: 0;
+}
+
+.slider {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.slide {
+  float: left;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.slide--full {
+  width: 100%;
+}
+
+.slide__image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.slide__opacity {
+  background-color: #000000;
+  height: 100%;
+  opacity: .75;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.slide__text {
+  padding: 0 15px;
+  position: relative;
+  text-align: center;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 64em) {
+  .slide__text {
+    padding: 0;
+  }
 }
 
 .recetas-cta__title {
@@ -289,4 +373,30 @@ h6 {
 
 .header__logo {
   cursor: pointer;
+}
+
+.testimonial {
+  height: 445px;
+}
+
+.testimonial__copy {
+  margin: 0 auto;
+  width: 70%;
+}
+
+@media only screen and (min-width: 64em) {
+  .testimonial__copy {
+    width: 50%;
+  }
+}
+
+.testimonial__story {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 26px;
+}
+
+.testimonial__source {
+  margin-top: 50px;
+  font-size: 30px;
 }
