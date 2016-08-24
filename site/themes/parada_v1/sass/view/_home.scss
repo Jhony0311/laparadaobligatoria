@@ -1,18 +1,20 @@
-.testimonial {
-    height: 445px;
-    &__copy {
-        margin: 0 auto;
-        width: 70%;
-        @include mq($large-up) {
-            width: 50%;
+.section-home {
+    .testimonial {
+        height: 445px;
+        &__copy {
+            margin: 0 auto;
+            width: 70%;
+            @include mq($large-up) {
+                width: 50%;
+            }
         }
-    }
-    &__story {
-        @include font-style($style: thin);
-        font-size: 26px;
-    }
-    &__source {
-        margin-top: 50px;
-        font-size: 30px;
+        &__story {
+            @include font-style($style: thin);
+            font-size: 26px;
+        }
+        &__source {
+            margin-top: 50px;
+            font-size: 30px;
+        }
     }
 }

@@ -375,28 +375,28 @@ h6 {
   cursor: pointer;
 }
 
-.testimonial {
+.section-home .testimonial {
   height: 445px;
 }
 
-.testimonial__copy {
+.section-home .testimonial__copy {
   margin: 0 auto;
   width: 70%;
 }
 
 @media only screen and (min-width: 64em) {
-  .testimonial__copy {
+  .section-home .testimonial__copy {
     width: 50%;
   }
 }
 
-.testimonial__story {
+.section-home .testimonial__story {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 26px;
 }
 
-.testimonial__source {
+.section-home .testimonial__source {
   margin-top: 50px;
   font-size: 30px;
 }
