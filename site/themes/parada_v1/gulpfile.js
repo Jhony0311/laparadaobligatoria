@@ -16,9 +16,14 @@ elixir.config.assetsPath = './';
 elixir(function(mix) {
     mix.sass(theme + '.scss', 'css/' + theme + '.css');
 
-    mix.scripts([
-        'vendor/device.js',
-        'vendor/modernizr-custom.js',
-        'jabbascripts.js'
-    ], './js/' + theme + '.js');
+    mix.webpack(
+        'jabbascripts.js',
+        './js/' + theme + '.js'
+    );
+
+    // mix.scripts([
+    //     'vendor/device.js',
+    //     'vendor/modernizr-custom.js',
+    //     'jabbascripts.js'
+    // ], './js/' + theme + '.js');
 });

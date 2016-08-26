@@ -1,10 +1,16 @@
 {
   "private": true,
   "devDependencies": {
-    "gulp": "^3.9.0",
-    "laravel-elixir": "^3.2.8"
+    "buble-loader": "^0.2.2",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.2",
+    "laravel-elixir": "^6.0.0-10",
+    "laravel-elixir-webpack-official": "^1.0.4"
   },
   "dependencies": {
-    "normalize.css": "^4.2.0"
+    "instafeed.js": "^1.4.1",
+    "jquery": "^3.1.0",
+    "normalize.css": "^4.2.0",
+    "slick-carousel": "^1.6.0"
   }
 }

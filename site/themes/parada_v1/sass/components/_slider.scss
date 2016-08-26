@@ -1,7 +1,25 @@
 .slider {
     width: 100%;
     height: auto;
+    margin-bottom: 0;
     overflow: hidden;
+    position: relative;
+    &.slick-dotted {
+        margin-bottom: 0;
+    }
+    .slick-dots {
+        bottom: 35px;
+        li {
+            background-color: $white;
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            margin: 0 8px;
+            &.slick-active {
+                background-color: $red;
+            }
+        }
+    }
 }
 .slide {
     float: left;
