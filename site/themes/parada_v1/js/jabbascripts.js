@@ -16,10 +16,10 @@ $('.slider').slick({
     pauseOnHover: false
 });
 
-var feed = new Instafeed({
-    get: 'tagged',
-    tagName: 'jhony0311',
-    clientId: 'fc5b9f916b8649c1a79b6131304903ff',
-    accessToken: '177311424.1677ed0.823d8dcdb28144f9bd71f05f8265a9e3'
-});
-feed.run();
+// var feed = new Instafeed({
+//     get: 'tagged',
+//     tagName: 'jhony0311',
+//     clientId: 'fc5b9f916b8649c1a79b6131304903ff',
+//     accessToken: '177311424.1677ed0.823d8dcdb28144f9bd71f05f8265a9e3'
+// });
+// feed.run();

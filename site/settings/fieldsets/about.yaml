@@ -18,3 +18,38 @@ fields:
     container: hero-images
     folder: /
     max_files: 1
+  image_1:
+    type: assets
+    display: Image 1
+    container: main
+    folder: img
+    max_files: 1
+    width: 50
+  text_1:
+    type: textarea
+    display: Text 1
+    width: 50
+  image_strip:
+    type: assets
+    display: Image Strip
+    container: main
+    folder: /
+    max_files: 3
+  image_2:
+    type: assets
+    display: Image 2
+    container: hero-images
+    folder: /
+  text_2:
+    type: textarea
+    display: Text 2
+  text_3:
+    type: textarea
+    display: Text 3
+    width: 75
+  image_3:
+    type: assets
+    display: Image 3
+    container: hero-images
+    folder: /
+    width: 25
