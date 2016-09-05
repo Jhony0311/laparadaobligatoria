@@ -1,7 +1,7 @@
 <?php namespace App;
 
-use Roots\Sage\Template;
-use Roots\Sage\Template\Wrapper;
+use lib\Sage\Template;
+use lib\Sage\Template\Wrapper;
 
 /**
  * Determine which pages should NOT display the sidebar

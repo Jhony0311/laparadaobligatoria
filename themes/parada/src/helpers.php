@@ -1,8 +1,8 @@
 <?php namespace App;
 
-use Roots\Sage\Asset;
-use Roots\Sage\Assets\JsonManifest;
-use Roots\Sage\Template;
+use lib\Sage\Asset;
+use lib\Sage\Assets\JsonManifest;
+use lib\Sage\Template;
 
 function template($layout = 'base')
 {

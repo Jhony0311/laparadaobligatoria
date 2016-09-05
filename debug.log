@@ -4,3 +4,6 @@
 [05-Sep-2016 03:41:57 UTC] PHP Fatal error:  Class 'Roots\Sage\Assets\JsonManifest' not found in /srv/www/paradaobligatoria/htdocs/wp-content/themes/parada/src/helpers.php on line 25
 [05-Sep-2016 03:44:32 UTC] PHP Fatal error:  Class 'Roots\Sage\Assets\JsonManifest' not found in /srv/www/paradaobligatoria/htdocs/wp-content/themes/parada/src/helpers.php on line 25
 [05-Sep-2016 03:52:36 UTC] PHP Fatal error:  Class 'Roots\Sage\Assets\JsonManifest' not found in /srv/www/paradaobligatoria/htdocs/wp-content/themes/parada/src/helpers.php on line 25
+[05-Sep-2016 04:36:49 UTC] PHP Fatal error:  Class 'Sage\Assets\JsonManifest' not found in /srv/www/paradaobligatoria/htdocs/wp-content/themes/parada/src/helpers.php on line 25
+[05-Sep-2016 04:38:06 UTC] PHP Fatal error:  Class 'lib\Sage\Assets\JsonManifest' not found in /srv/www/paradaobligatoria/htdocs/wp-content/themes/parada/src/helpers.php on line 25
+[05-Sep-2016 04:48:43 UTC] PHP Fatal error:  Class 'lib\Sage\Assets\JsonManifest' not found in /srv/www/paradaobligatoria/htdocs/wp-content/themes/parada/src/helpers.php on line 25
