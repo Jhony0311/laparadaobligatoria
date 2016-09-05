@@ -1,0 +1,51 @@
+.hero {
+    display: flex;
+    align-items: center;
+    height: 320px;
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    @include mq($large-up) {
+        height: 640px;
+    }
+    &__image {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 0;
+    }
+    &__opacity {
+        background-color: $black;
+        height: 100%;
+        opacity: .75;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    &__tt {
+        padding: 0 15px;
+        position: relative;
+        text-align: center;
+        z-index: 3;
+        @include mq($large-up) {
+            padding: 0;
+        }
+    }
+    &__title {
+        @include font-style($style: title);
+        text-transform: uppercase;
+        margin: 0;
+    }
+    &__subtitle {
+        @include font-style($style: thin);
+        font-size: 20px;
+        margin: 0;
+    }
+}

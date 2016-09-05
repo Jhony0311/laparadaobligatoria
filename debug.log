@@ -1,0 +1,6 @@
+[05-Sep-2016 03:38:58 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /srv/www/paradaobligatoria/htdocs/wp-includes/update.php on line 479
+[05-Sep-2016 03:41:38 UTC] PHP Fatal error:  Class 'Roots\Sage\Assets\JsonManifest' not found in /srv/www/paradaobligatoria/htdocs/wp-content/themes/parada/src/helpers.php on line 25
+[05-Sep-2016 03:41:47 UTC] PHP Fatal error:  Class 'Roots\Sage\Assets\JsonManifest' not found in /srv/www/paradaobligatoria/htdocs/wp-content/themes/parada/src/helpers.php on line 25
+[05-Sep-2016 03:41:57 UTC] PHP Fatal error:  Class 'Roots\Sage\Assets\JsonManifest' not found in /srv/www/paradaobligatoria/htdocs/wp-content/themes/parada/src/helpers.php on line 25
+[05-Sep-2016 03:44:32 UTC] PHP Fatal error:  Class 'Roots\Sage\Assets\JsonManifest' not found in /srv/www/paradaobligatoria/htdocs/wp-content/themes/parada/src/helpers.php on line 25
+[05-Sep-2016 03:52:36 UTC] PHP Fatal error:  Class 'Roots\Sage\Assets\JsonManifest' not found in /srv/www/paradaobligatoria/htdocs/wp-content/themes/parada/src/helpers.php on line 25

@@ -1,0 +1,38 @@
+/**
+* Base stylesheets
+**/
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/helpers';
+@import 'base/media-queries';
+@import 'base/base';
+@import 'base/classes';
+@import 'base/typography';
+
+/**
+* Vendor stylesheets
+**/
+@import '~normalize.css';
+@import "~font-awesome/scss/font-awesome";
+@import '~slick-carousel/slick/slick-theme.scss';
+
+/**
+* Component stylesheets
+**/
+@import 'components/forms';
+@import 'components/gallery';
+@import 'components/nav';
+@import 'components/hero';
+@import 'components/slider';
+@import 'components/ctas';
+
+/**
+* Layout stylesheets
+**/
+@import 'layout/footer';
+@import 'layout/header';
+
+/**
+* Views stylesheets
+**/
+@import 'view/home';

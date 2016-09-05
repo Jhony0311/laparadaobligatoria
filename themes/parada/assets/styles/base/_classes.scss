@@ -1,0 +1,21 @@
+.content-wrapper {
+    margin: 0 auto;
+    max-width: 973px;
+    width: 95%;
+    @include mq($large-up) {
+        width: 98%;
+    }
+}
+.inline {
+    display: inline;
+}
+.inline-block {
+    display: inline-block;
+}
+.block {
+    display: block;
+}
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}

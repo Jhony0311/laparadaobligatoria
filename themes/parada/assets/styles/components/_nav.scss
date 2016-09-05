@@ -1,0 +1,29 @@
+.navigation {
+    &__link {
+        color: $white;
+        margin-left: 20px;
+        font-size: 12px;
+        padding: 10px 3px;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:first-child {
+            margin: 0;
+        }
+        &--active,
+        &:hover {
+            &::after {
+                background-color: #fff;
+                border-radius: 50%;
+                display: block;
+                content: " ";
+                bottom: 1px;
+                height: 5px;
+                margin-left: 50%;
+                left: -2.5px;
+                position: absolute;
+                width: 5px;
+            }
+        }
+    }
+}
