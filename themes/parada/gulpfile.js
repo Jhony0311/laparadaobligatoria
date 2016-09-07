@@ -198,21 +198,13 @@ gulp.task('styles', ['wiredep'], function() {
 // and project JS.
 
 function buildScript(file, watch) {
-  var props = {
-    entries: ['asset/scripts/' + file],
-    debug : true,
-    cache: {},
-    packageCache: {},
-    transform:  [babelify.configure({stage : 0 })]
-  };
-
   // watchify() if watch requested, otherwise run browserify() once
-  var bundler = watch ? watchify(browserify(props)) : browserify(props);
+  var bundler = watch ? watchify(browserify(('./assets/scripts/' + file), {debug: true})) : browserify(('./assets/scripts/' + file), {debug: true});
 
   function rebundle() {
-    var stream = bundler.bundle();
+    var stream = bundler.transform('babelify', {presets: ['es2015']}).bundle();
     return stream
-      .on('error', (err) => {console.log('JS compilation error')})
+      .on('error', (err) => {console.log('Error:', err.message);})
       .pipe(source(file))
       // If you also want to uglify it
       // .pipe(buffer())
@@ -233,6 +225,9 @@ function buildScript(file, watch) {
 }
 
 gulp.task('scripts', ['jshint'], function() {
+  return buildScript('main.js', true); // this will run once because we set watch to false
+});
+gulp.task('scripts:prod', ['jshint'], function() {
   return buildScript('main.js', false); // this will run once because we set watch to false
 });
 // gulp.task('scripts', ['jshint'], function() {
@@ -316,7 +311,7 @@ gulp.task('watch', function() {
 // Generally you should be running `gulp` instead of `gulp build`.
 gulp.task('build', function(callback) {
   runSequence('styles',
-              'scripts',
+              'scripts:prod',
               ['fonts', 'images'],
               callback);
 });
