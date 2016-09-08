@@ -9,7 +9,7 @@
         </div>
         <?php
         if (has_nav_menu('primary_navigation')) :
-            wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav', 'container_class' => 'navigation', 'container' => 'nav' ]);
+            wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'navigation__wrapper', 'container_class' => 'navigation', 'container' => 'nav' ]);
         endif;
         ?>
     </div>
