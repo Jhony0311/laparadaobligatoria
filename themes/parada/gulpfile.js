@@ -1,31 +1,32 @@
 // ## Globals
-var argv         = require('minimist')(process.argv.slice(2));
+var argv = require('minimist')(process.argv.slice(2));
 var autoprefixer = require('autoprefixer');
-var babelify     = require('babelify');
-var browserSync  = require('browser-sync').create();
-var browserify   = require('browserify');
-var buffer       = require('vinyl-buffer');
-var watchify     = require('watchify');
-var changed      = require('gulp-changed');
-var concat       = require('gulp-concat');
-var flatten      = require('gulp-flatten');
-var gulp         = require('gulp');
-var gulpif       = require('gulp-if');
-var imagemin     = require('gulp-imagemin');
-var jshint       = require('gulp-jshint');
-var lazypipe     = require('lazypipe');
-var less         = require('gulp-less');
-var merge        = require('merge-stream');
-var notify       = require('gulp-notify');
-var cssNano      = require('cssnano');
-var plumber      = require('gulp-plumber');
-var rev          = require('gulp-rev');
-var reload       = browserSync.reload;
-var runSequence  = require('run-sequence');
-var sass         = require('gulp-sass');
-var source       = require('vinyl-source-stream');
-var sourcemaps   = require('gulp-sourcemaps');
-var uglify       = require('gulp-uglify');
+var babelify = require('babelify');
+var browserSync = require('browser-sync').create();
+var browserify = require('browserify');
+var buffer = require('vinyl-buffer');
+var watchify = require('watchify');
+var changed = require('gulp-changed');
+var concat = require('gulp-concat');
+var flatten = require('gulp-flatten');
+var gulp = require('gulp');
+var gulpif = require('gulp-if');
+var imagemin = require('gulp-imagemin');
+var jshint = require('gulp-jshint');
+var lazypipe = require('lazypipe');
+var less = require('gulp-less');
+var merge = require('merge-stream');
+var notify = require('gulp-notify');
+var cssNano = require('cssnano');
+var plumber = require('gulp-plumber');
+var postcss = require('gulp-postcss');
+var rev = require('gulp-rev');
+var reload = browserSync.reload;
+var runSequence = require('run-sequence');
+var sass = require('gulp-sass');
+var source = require('vinyl-source-stream');
+var sourcemaps = require('gulp-sourcemaps');
+var uglify = require('gulp-uglify');
 
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./assets/manifest.json');
@@ -85,15 +86,25 @@ var revManifest = path.dist + 'assets.json';
 //   .pipe(gulp.dest(path.dist + 'styles'))
 // ```
 var cssTasks = function(filename) {
+    var procesors = [
+        autoprefixer({
+          browsers: [
+            'last 2 versions',
+            'ie 8',
+            'ie 9',
+            'android 2.3',
+            'android 4',
+            'opera 12'
+          ]
+        }),
+        cssNano()
+    ];
   return lazypipe()
     .pipe(function() {
       return gulpif(!enabled.failStyleTask, plumber());
     })
     .pipe(function() {
       return gulpif(enabled.maps, sourcemaps.init());
-    })
-    .pipe(function() {
-      return gulpif('*.less', less());
     })
     .pipe(function() {
       return gulpif('*.scss', sass({
@@ -104,19 +115,7 @@ var cssTasks = function(filename) {
       }));
     })
     .pipe(concat, filename)
-    .pipe(autoprefixer, {
-      browsers: [
-        'last 2 versions',
-        'ie 8',
-        'ie 9',
-        'android 2.3',
-        'android 4',
-        'opera 12'
-      ]
-    })
-    .pipe(cssNano, {
-      safe: true
-    })
+    .pipe(postcss, procesors)
     .pipe(function() {
       return gulpif(enabled.rev, rev());
     })
@@ -161,7 +160,9 @@ var jsTasks = function(filename) {
 var writeToManifest = function(directory) {
   return lazypipe()
     .pipe(gulp.dest, path.dist + directory)
-    .pipe(browserSync.stream, {match: '**/*.{js,css}'})
+    .pipe(browserSync.stream, {
+      match: '**/*.{js,css}'
+    })
     .pipe(rev.manifest, revManifest, {
       base: path.dist,
       merge: true
@@ -186,7 +187,9 @@ gulp.task('styles', ['wiredep'], function() {
         this.emit('end');
       });
     }
-    merged.add(gulp.src(dep.globs, {base: 'styles'})
+    merged.add(gulp.src(dep.globs, {
+        base: 'styles'
+      })
       .pipe(cssTasksInstance));
   });
   return merged
@@ -199,19 +202,29 @@ gulp.task('styles', ['wiredep'], function() {
 
 function buildScript(file, watch) {
   // watchify() if watch requested, otherwise run browserify() once
-  var bundler = watch ? watchify(browserify(('./assets/scripts/' + file), {debug: true})) : browserify(('./assets/scripts/' + file), {debug: true});
+  var bundler = watch ? watchify(browserify(('./assets/scripts/' + file), {
+    debug: true
+  })) : browserify(('./assets/scripts/' + file), {
+    debug: true
+  });
 
   function rebundle() {
-    var stream = bundler.transform('babelify', {presets: ['es2015']}).bundle();
+    var stream = bundler.transform('babelify', {
+      presets: ['es2015']
+    }).bundle();
     return stream
-      .on('error', (err) => {console.log('Error:', err.message);})
+      .on('error', (err) => {
+        console.log('Error:', err.message);
+      })
       .pipe(source(file))
       // If you also want to uglify it
       // .pipe(buffer())
       // .pipe(uglify())
       // .pipe(rename('app.min.js'))
       // .pipe(gulp.dest('./build'))
-      .pipe(reload({stream:true}))
+      .pipe(reload({
+        stream: true
+      }))
       .pipe(writeToManifest('scripts'));
   }
 
@@ -263,7 +276,11 @@ gulp.task('images', function() {
     .pipe(imagemin({
       progressive: true,
       interlaced: true,
-      svgoPlugins: [{removeUnknownsAndDefaults: false}, {cleanupIDs: false}]
+      svgoPlugins: [{
+        removeUnknownsAndDefaults: false
+      }, {
+        cleanupIDs: false
+      }]
     }))
     .pipe(gulp.dest(path.dist + 'images'))
     .pipe(browserSync.stream());
@@ -273,8 +290,8 @@ gulp.task('images', function() {
 // `gulp jshint` - Lints configuration JSON and project JS.
 gulp.task('jshint', function() {
   return gulp.src([
-   'gulpfile.js'
-  ].concat(project.js))
+      'gulpfile.js'
+    ].concat(project.js))
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(gulpif(enabled.failJSHint, jshint.reporter('fail')));
@@ -311,9 +328,8 @@ gulp.task('watch', function() {
 // Generally you should be running `gulp` instead of `gulp build`.
 gulp.task('build', function(callback) {
   runSequence('styles',
-              'scripts:prod',
-              ['fonts', 'images'],
-              callback);
+    'scripts:prod', ['fonts', 'images'],
+    callback);
 });
 
 // ### Wiredep
