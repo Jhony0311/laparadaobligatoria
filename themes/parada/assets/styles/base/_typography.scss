@@ -18,6 +18,14 @@ h6 {
     letter-spacing: 0.15em;
     text-transform: uppercase;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
 .black {
     @include font-style($style: black);
 }

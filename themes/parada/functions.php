@@ -18,6 +18,8 @@ $sage_includes = [
   'lib/customizer.php' // Theme customizer
 ];
 
+add_theme_support( 'custom-logo' );
+
 foreach ($sage_includes as $file) {
   if (!$filepath = locate_template($file)) {
     trigger_error(sprintf(__('Error locating %s for inclusion', 'sage'), $file), E_USER_ERROR);
