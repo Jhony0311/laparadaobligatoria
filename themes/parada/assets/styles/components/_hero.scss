@@ -48,4 +48,18 @@
         font-size: 20px;
         margin: 0;
     }
+    /**
+    * Styles only for specific pages
+    **/
+    .home & {
+        &__tt {
+            max-width: 297px;
+        }
+        &__title {
+            font-size: 40px;
+        }
+        &__logo {
+            max-width: 200px;
+        }
+    }
 }
