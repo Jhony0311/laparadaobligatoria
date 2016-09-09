@@ -3,10 +3,9 @@
         list-style: none;
         padding: 0;
     }
-    &__link {
-        color: $white;
+    .menu-item {
+        display: inline-block;
         margin-left: 20px;
-        font-size: 12px;
         padding: 10px 3px;
         position: relative;
         text-decoration: none;
@@ -14,7 +13,7 @@
         &:first-child {
             margin: 0;
         }
-        &--active,
+        &.current-menu-item,
         &:hover {
             &::after {
                 background-color: #fff;
@@ -28,6 +27,11 @@
                 position: absolute;
                 width: 5px;
             }
+        }
+        a {
+            color: $white;
+            font-size: 12px;
+            text-decoration: none;
         }
     }
 }

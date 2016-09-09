@@ -1,6 +1,6 @@
 .footer {
     &__body {
-        background: transparent url(../images/footer_bg.png) center no-repeat;
+        background: $black url(../images/footer_bg.png) center no-repeat;
         background-size: cover;
         display: block;
         min-height: 300px;
