@@ -243,21 +243,6 @@ gulp.task('scripts', ['jshint'], function() {
 gulp.task('scripts:prod', ['jshint'], function() {
   return buildScript('main.js', false); // this will run once because we set watch to false
 });
-// gulp.task('scripts', ['jshint'], function() {
-//   // var merged = merge();
-//   // manifest.forEachDependency('js', function(dep) {
-//   //   merged.add(
-//   //     gulp.src(dep.globs, {base: 'scripts'})
-//   //       .pipe(jsTasks(dep.name))
-//   //   );
-//   // });
-//   // return merged
-//     return gulp.src('assets/scripts/main.js')
-//         .pipe(babel({
-//           presets: ['es2015']
-//         }))
-//         .pipe(writeToManifest('scripts'));
-// });
 
 // ### Fonts
 // `gulp fonts` - Grabs all the fonts and outputs them in a flattened directory

@@ -1,10 +1,25 @@
 .footer {
+    .content-wrapper {
+        position: relative;
+        z-index: 5;
+    }
     &__body {
-        background: $black url(../images/footer_bg.png) center no-repeat;
+        background: $black url(../images/footer_bg.jpg) center no-repeat;
         background-size: cover;
         display: block;
         min-height: 300px;
         padding: 35px 0 25px;
+        position: relative;
+    }
+    &__opacity {
+        background-color: $black;
+        height: 100%;
+        opacity: .75;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
     }
     &__legal {
         align-items: center;

@@ -1,5 +1,6 @@
 <footer class="footer">
     <div class="footer__body">
+        <div class="footer__opacity"></div>
         <div class="content-wrapper">
             <?php if ( ! dynamic_sidebar('sidebar-footer') ) : ?>
             <div class="footer__item-wrapper">

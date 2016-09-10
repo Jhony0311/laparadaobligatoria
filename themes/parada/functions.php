@@ -17,8 +17,34 @@ $sage_includes = [
   'lib/wrapper.php',   // Theme wrapper class
   'lib/customizer.php' // Theme customizer
 ];
-
+/**
+ * Add logo support
+ */
 add_theme_support( 'custom-logo' );
+
+/**
+ * Register post types
+ */
+
+function testimonials_cpt() {
+    $args = array(
+        'label' => 'Testomonials',
+        'public' => false,
+        'show_ui' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => true,
+        'show_in_rest' => true,
+        'menu_icon' => 'dashicons-format-status',
+        'supports' => array(
+            'title',
+            'editor'
+        )
+    );
+
+    register_post_type('testimonials', $args);
+}
+
+add_action('init', 'testimonials_cpt');
 
 foreach ($sage_includes as $file) {
   if (!$filepath = locate_template($file)) {

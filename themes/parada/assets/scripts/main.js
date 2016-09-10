@@ -10,7 +10,7 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 (function($) {
-
+    const slick = require('slick-carousel');
     // Use this variable to set up the common and page specific functions. If you
     // rename this variable, you will also need to rename the namespace below.
     let Sage = {
