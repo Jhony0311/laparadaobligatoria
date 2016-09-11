@@ -62,8 +62,27 @@ function banners_cpt() {
     register_post_type('banners', $args);
 }
 
+function products_cpt() {
+    $args = array(
+        'label' => 'Productos',
+        'public' => true,
+        'show_ui' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'show_in_rest' => true,
+        'menu_icon' => 'dashicons-store',
+        'supports' => array(
+            'title',
+            'editor'
+        )
+    );
+
+    register_post_type('products', $args);
+}
+
 add_action('init', 'testimonials_cpt');
 add_action('init', 'banners_cpt');
+add_action('init', 'products_cpt');
 
 /**
  * Add shortcodes
@@ -89,6 +108,11 @@ add_shortcode( 'grid', 'grid_shortcode' );
 add_shortcode( 'one_half', 'one_half_shortcode' );
 add_shortcode( 'one_third', 'one_third_shortcode' );
 add_shortcode( 'two_third', 'two_third_shortcode' );
+
+function new_excerpt_more( $more ) {
+	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 foreach ($sage_includes as $file) {
   if (!$filepath = locate_template($file)) {

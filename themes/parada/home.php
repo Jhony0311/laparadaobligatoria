@@ -13,8 +13,8 @@
     </section>
 <?php endif; ?>
 <!-- /Hero image -->
-<div class="row">
-    <div class="small-12 medium-9 columns">
+<div class="content-wrapper row">
+    <div class="small-12 medium-8 columns">
         <?php if (!have_posts()) : ?>
           <div class="alert alert-warning">
             <?php _e('Sorry, no results were found.', 'sage'); ?>
@@ -26,7 +26,7 @@
         <?php endwhile; ?>
         <?php the_posts_navigation(); ?>
     </div>
-    <div class="small-12 medium-3 columns">
-        <?php get_sidebar(); ?>
+    <div class="small-12 medium-4 columns">
+        <?php dynamic_sidebar('sidebar-primary'); ?>
     </div>
 </div>
