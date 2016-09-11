@@ -29,7 +29,11 @@
             <div class="testimonial__copy">
                 <div class="testimonial__story"><?php the_content(); ?></div>
                 <div class="testimonial__source">
-                    <?php the_field('testimony_deponent', $t->ID);  if( the_field('testimony_nationality', $t->ID) ): ?>, <?php endif; the_field('testimony_nationality', $t->ID); ?>
+                    <?php the_field('testimony_deponent', $t->ID); if( get_field('testimony_nationality', $t->ID)): ?>,
+                        <?php the_field('testimony_nationality', $t->ID); ?>
+                    <?php
+                        endif;
+                    ?>
                 </div>
             </div>
         </div>
