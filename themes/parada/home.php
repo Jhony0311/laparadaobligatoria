@@ -13,15 +13,20 @@
     </section>
 <?php endif; ?>
 <!-- /Hero image -->
-<?php if (!have_posts()) : ?>
-  <div class="alert alert-warning">
-    <?php _e('Sorry, no results were found.', 'sage'); ?>
-  </div>
-  <?php get_search_form(); ?>
-<?php endif; ?>
-
-<?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
-<?php endwhile; ?>
-<?php get_sidebar(); ?>
-<?php the_posts_navigation(); ?>
+<div class="row">
+    <div class="small-12 medium-9 columns">
+        <?php if (!have_posts()) : ?>
+          <div class="alert alert-warning">
+            <?php _e('Sorry, no results were found.', 'sage'); ?>
+          </div>
+          <?php get_search_form(); ?>
+        <?php endif; ?>
+        <?php while (have_posts()) : the_post(); ?>
+          <?php get_template_part('templates/post-short', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
+        <?php endwhile; ?>
+        <?php the_posts_navigation(); ?>
+    </div>
+    <div class="small-12 medium-3 columns">
+        <?php get_sidebar(); ?>
+    </div>
+</div>
