@@ -3,7 +3,7 @@
  * Template Name: Homepage Template
  */
 ?>
-
+<!-- Hero image -->
 <?php if( get_field('hero_image') ): ?>
     <section class="hero">
         <div class="hero__image" style="background-image: url('<?php the_field('hero_image'); ?>')"></div>
@@ -14,6 +14,8 @@
         </div>
     </section>
 <?php endif; ?>
+<!-- /Hero image -->
+<!-- Testimony slider  -->
 <?php if( get_field('testimony_list') ):
     $testimonies = get_field('testimony_list');
 ?>
@@ -44,8 +46,8 @@
 ?>
 </div>
 <?php endif; ?>
-
-
+<!-- /Testimony slider -->
+<!-- Banner block -->
 <?php if( get_field('banner_space') ):
         $banners = get_field('banner_space');
         foreach( $banners as $banner ):
@@ -63,7 +65,4 @@
         endforeach;
     endif;
 ?>
-<?php while (have_posts()) : the_post(); ?>
-    <!-- Page content -->
-    <?php get_template_part('templates/content', 'page'); ?>
-<?php endwhile; ?>
+<!-- /Banner block  -->
