@@ -1,6 +1,9 @@
-body {
-    background: $baseColor;
+body.page-template,
+body.page,
+body.blog,
+body.single {
     margin: 0;
+    background: $baseColor;
 }
 #main-content {
     @include font-style();

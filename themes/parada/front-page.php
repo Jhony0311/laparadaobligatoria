@@ -1,8 +1,3 @@
-<?php
-/**
- * Template Name: Homepage Template
- */
-?>
 <!-- Hero image -->
 <?php if( get_field('hero_image') ): ?>
     <section class="hero">

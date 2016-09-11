@@ -19,6 +19,7 @@
 /**
 * Component stylesheets
 **/
+@import 'components/foundation';
 @import 'components/forms';
 @import 'components/gallery';
 @import 'components/nav';
@@ -36,3 +37,4 @@
 * Views stylesheets
 **/
 @import 'view/home';
+@import 'view/about';

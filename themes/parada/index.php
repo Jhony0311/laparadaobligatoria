@@ -1,5 +1,8 @@
-<?php get_template_part('templates/page', 'header'); ?>
-
+<!-- Hero image -->
+<?php if( get_field('hero_image') ): ?>
+    <?php get_template_part('templates/hero-image'); ?>
+<?php endif; ?>
+<!-- /Hero image -->
 <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">
     <?php _e('Sorry, no results were found.', 'sage'); ?>

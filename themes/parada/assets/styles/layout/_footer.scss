@@ -59,7 +59,8 @@
             margin-bottom: 10px;
             text-transform: uppercase;
         }
-        &__description {
+        &__description,
+        .textwidget {
             @include font-style($style: regular);
             font-size: 16px;
             margin-bottom: 10px;

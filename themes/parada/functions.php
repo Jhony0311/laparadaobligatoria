@@ -65,6 +65,31 @@ function banners_cpt() {
 add_action('init', 'testimonials_cpt');
 add_action('init', 'banners_cpt');
 
+/**
+ * Add shortcodes
+ */
+
+function grid_shortcode( $atts, $content = null ) {
+    return '<div class="row">' . do_shortcode($content) . '</div>';
+}
+
+function one_half_shortcode( $atts, $content = null ) {
+    return '<div class="columns small-12 medium-6">' . do_shortcode($content) . '</div>';
+}
+
+function one_third_shortcode( $atts, $content = null ) {
+    return '<div class="columns small-12 medium-4">' . do_shortcode($content) . '</div>';
+}
+
+function two_third_shortcode( $atts, $content = null ) {
+    return '<div class="columns small-12 medium-8">' . do_shortcode($content) . '</div>';
+}
+
+add_shortcode( 'grid', 'grid_shortcode' );
+add_shortcode( 'one_half', 'one_half_shortcode' );
+add_shortcode( 'one_third', 'one_third_shortcode' );
+add_shortcode( 'two_third', 'two_third_shortcode' );
+
 foreach ($sage_includes as $file) {
   if (!$filepath = locate_template($file)) {
     trigger_error(sprintf(__('Error locating %s for inclusion', 'sage'), $file), E_USER_ERROR);
