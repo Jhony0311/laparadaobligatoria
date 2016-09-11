@@ -28,7 +28,7 @@ add_theme_support( 'custom-logo' );
 
 function testimonials_cpt() {
     $args = array(
-        'label' => 'Testomonials',
+        'label' => 'Testimonials',
         'public' => false,
         'show_ui' => true,
         'publicly_queryable' => true,
@@ -44,7 +44,26 @@ function testimonials_cpt() {
     register_post_type('testimonials', $args);
 }
 
+function banners_cpt() {
+    $args = array(
+        'label' => 'Banners',
+        'public' => false,
+        'show_ui' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => true,
+        'show_in_rest' => true,
+        'menu_icon' => 'dashicons-grid-view',
+        'supports' => array(
+            'title',
+            'editor'
+        )
+    );
+
+    register_post_type('banners', $args);
+}
+
 add_action('init', 'testimonials_cpt');
+add_action('init', 'banners_cpt');
 
 foreach ($sage_includes as $file) {
   if (!$filepath = locate_template($file)) {

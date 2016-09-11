@@ -1,12 +1,12 @@
 body {
-    @include font-style();
     background: $baseColor;
-    color: $white;
-    font-size-adjust: 0;
-    font-size: 18px;
     margin: 0;
 }
 #main-content {
+    @include font-style();
+    color: $white;
+    font-size-adjust: 0;
+    font-size: 18px;
     @include mq($large-up) {
         min-height: calc(100vh - 400px);
     }

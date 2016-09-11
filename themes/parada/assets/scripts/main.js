@@ -9,15 +9,25 @@
  * The routing is enclosed within an anonymous function so that you can
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
+import slick from 'slick-carousel';
+// import device from './vendors/device';
 (function($) {
-    const slick = require('slick-carousel');
     // Use this variable to set up the common and page specific functions. If you
     // rename this variable, you will also need to rename the namespace below.
     let Sage = {
         // All pages
         'common': {
             init: function() {
-                 // JavaScript to be fired on all pages
+                // JavaScript to be fired on all pages
+                $('.slider').slick({
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                    dots: true,
+                    draggable: false,
+                    pauseOnFocus: false,
+                    pauseOnHover: false
+                });
             },
             finalize: function() {
                 // JavaScript to be fired on all pages, after page specific JS is fired

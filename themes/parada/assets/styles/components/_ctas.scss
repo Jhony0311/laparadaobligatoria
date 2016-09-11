@@ -1,4 +1,4 @@
-.recetas-cta {
+.banner-cta {
     &__title {
         @include font-style($style: title);
         color: $primaryColor;
@@ -13,13 +13,16 @@
     }
     &__link {
         @include font-style($style: title);
+        cursor: pointer;
         color: $darkGray;
         font-size: 20px;
         text-decoration: none;
     }
     &__wrapper {
         box-sizing: border-box;
-        background: $white url(../images/recetascta_bg.png) center no-repeat;
+        background-color: $white;
+        background-position: center;
+        background-repeat: no-repeat;
         background-size: cover;
         text-align: center;
         padding: 45px 0;
