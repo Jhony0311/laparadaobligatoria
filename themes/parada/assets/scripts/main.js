@@ -10,6 +10,8 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 import slick from 'slick-carousel';
+import $ from 'jquery';
+import jQuery from 'jquery';
 // import device from './vendors/device';
 (function($) {
     // Use this variable to set up the common and page specific functions. If you
