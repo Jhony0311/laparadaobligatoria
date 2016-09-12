@@ -1,0 +1,83 @@
+.footer {
+    margin-top: 25px;
+    @include mq($medium-up) {
+        margin-top: 45px;
+    }
+    .content-wrapper {
+        position: relative;
+        z-index: 5;
+    }
+    &__body {
+        background: $black url(../images/footer_bg.jpg) center no-repeat;
+        background-size: cover;
+        display: block;
+        min-height: 300px;
+        padding: 35px 0 25px;
+        position: relative;
+    }
+    &__opacity {
+        background-color: $black;
+        height: 100%;
+        opacity: .75;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+    &__legal {
+        align-items: center;
+        background-color: $primaryColor;
+        display: flex;
+        height: 56px;
+        text-align: center;
+    }
+    &__copyright {
+        @include font-style($style: regular);
+        font-size: 14px;
+        color: $white;
+        margin: 0;
+    }
+    &__item-wrapper {
+        overflow: hidden;
+        clear: both;
+    }
+    .ft-item {
+        color: $white;
+        float: left;
+        margin-bottom: 40px;
+        width: 100%;
+        @include mq($large-up) {
+            width: 50%;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &--full {
+            clear: both;
+            width: 100%;
+        }
+        &__title {
+            @include font-style($style: black);
+            font-size: 25px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        &__description,
+        .textwidget {
+            @include font-style($style: regular);
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        &__link {
+            @include font-style($style: bold);
+            color: $white;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-decoration: none;
+            &:visited {
+                color: $white;
+            }
+        }
+    }
+}
