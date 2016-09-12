@@ -1,0 +1,39 @@
+.grid-wrapper {
+    margin: 0 -10px;
+    overflow: hidden;
+    @include mq($medium-up) {
+        margin: 0 -15px;
+    }
+}
+.one-half {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    @include mq($medium-up) {
+        width: 50%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.one-third {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    @include mq($medium-up) {
+        width: 25%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.two-third {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    @include mq($medium-up) {
+        width: 75%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

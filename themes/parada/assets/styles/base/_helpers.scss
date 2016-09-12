@@ -1,0 +1,37 @@
+// Mixins and functions
+//
+//
+// Mixing to get the font styling according the family
+@mixin font-style($style: regular) {
+    @if $style == title {
+        font-family: $lato;
+        font-weight: 700;
+    } @elseif $style == thin {
+        font-family: $lato;
+        font-weight: 300;
+    } @elseif $style == black {
+        font-family: $lato;
+        font-weight: 900;
+    } @else {
+        font-family: $lato;
+        font-weight: 400;
+    }
+}
+//
+//
+// Mixing to get the lower bound of an array or object
+@function lower-bound($range){
+    @if length($range) <= 0 {
+        @return 0;
+    }
+    @return nth($range,1);
+}
+//
+//
+// Mixing to get the upper bound of an array or object
+@function upper-bound($range) {
+    @if length($range) < 2 {
+        @return 999999999999;
+    }
+    @return nth($range, 2);
+}

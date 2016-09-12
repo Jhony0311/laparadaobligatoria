@@ -1,0 +1,30 @@
+.content-wrapper {
+    color: $black;
+    margin: 0 auto;
+    max-width: 973px;
+    width: 95%;
+    @include mq($large-up) {
+        width: 98%;
+    }
+}
+#main-content {
+    .content-wrapper {
+        padding-bottom: 25px;
+        @include mq($medium-up) {
+            padding-bottom: 45px;
+        }
+    }
+}
+.inline {
+    display: inline;
+}
+.inline-block {
+    display: inline-block;
+}
+.block {
+    display: block;
+}
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
