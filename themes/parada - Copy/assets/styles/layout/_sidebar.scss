@@ -1,0 +1,26 @@
+.search-2 {
+    clear: both;
+}
+.search-form {
+    display: flex;
+    margin-bottom: 15px;
+    overflow: hidden;
+    .screen-reader-text {
+        display: none;
+    }
+    label {
+        width: 78%;
+    }
+    .search-field {
+        width: 100%;
+    }
+}
+.archives-2 {
+    h3 {
+        font-size: 20px;
+    }
+    a {
+        color: $black;
+        text-decoration: none;
+    }
+}
