@@ -7,9 +7,90 @@
             <img src="<?php site_icon_url(); ?>" alt="<?php bloginfo('name'); ?> logo" class="hero__logo site__logo">
             <h1 class="hero__title"><?php bloginfo('name'); ?></h1>
         </div>
+        <div class="hero__arrow"></div>
     </section>
 <?php endif; ?>
 <!-- /Hero image -->
+<!-- Content -->
+<div class="content-wrapper">
+    <?php if(get_field('grid_homepagewidget_status')):
+        if (get_field('grid_widget_mainblock')) : ?>
+        <div class="row">
+            <?php
+            $block = get_field('grid_widget_mainblock');
+            foreach ($block as $b) :
+            setup_postdata($b);
+            ?>
+            <div class="grid-item columns small-12">
+                <div class="grid-item__wrapper">
+                    <div class="grid-item__image" style="background-image: url('<?php the_field('hero_image', $b->ID) ?>');"></div>
+                    <a href="<?php the_permalink(); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
+                </div>
+            </div>
+            <?php
+            wp_reset_postdata();
+            endforeach;
+            ?>
+        </div>
+    <?php endif; ?>
+        <div class="row">
+            <?php if (get_field('grid_widget_secondblock1')) : ?>
+            <?php
+                $block = get_field('grid_widget_secondblock1');
+                foreach ($block as $b) :
+                setup_postdata($b);
+            ?>
+                <div class="grid-item columns small-12 medium-4">
+                    <div class="grid-item__wrapper">
+                        <div class="grid-item__image" style="background-image: url('<?php the_field('hero_image', $b->ID) ?>');"></div>
+                        <a href="<?php the_permalink(); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
+                    </div>
+                </div>
+                <?php
+                wp_reset_postdata();
+                endforeach;
+                ?>
+            <?php endif; ?>
+
+            <?php if (get_field('grid_widget_secondblock2')) : ?>
+            <?php
+            $block = get_field('grid_widget_secondblock2');
+            foreach ($block as $b) :
+            setup_postdata($b);
+            ?>
+                <div class="grid-item columns small-12 medium-4">
+                    <div class="grid-item__wrapper">
+                        <div class="grid-item__image" style="background-image: url('<?php the_field('hero_image', $b->ID) ?>');"></div>
+                        <a href="<?php the_permalink(); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
+                    </div>
+                </div>
+                <?php
+                wp_reset_postdata();
+                endforeach;
+                ?>
+            <?php endif; ?>
+
+            <?php if (get_field('grid_widget_secondblock3')) : ?>
+            <?php
+            $block = get_field('grid_widget_secondblock3');
+            foreach ($block as $b) :
+            setup_postdata($b);
+            ?>
+                <div class="grid-item columns small-12 medium-4">
+                    <div class="grid-item__wrapper">
+                        <div class="grid-item__image" style="background-image: url('<?php the_field('hero_image', $b->ID) ?>');"></div>
+                        <a href="<?php the_permalink(); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
+                    </div>
+                </div>
+                <?php
+                wp_reset_postdata();
+                endforeach;
+                ?>
+            <?php endif; ?>
+        </div>
+    <?php endif; ?>
+</div>
+<!-- /Content -->
 <!-- Testimony slider  -->
 <?php if( get_field('testimony_list') ):
     $testimonies = get_field('testimony_list');
@@ -43,7 +124,8 @@
 <?php endif; ?>
 <!-- /Testimony slider -->
 <!-- Banner block -->
-<?php if( get_field('banner_space') ):
+<?php print_r(the_field('banner_status')) ?>
+<?php if( get_field('banner_space') && get_field('banner_status') ):
         $banners = get_field('banner_space');
         foreach( $banners as $banner ):
             setup_postdata($banner);

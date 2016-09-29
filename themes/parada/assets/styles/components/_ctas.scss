@@ -24,8 +24,20 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        text-align: center;
         padding: 45px 0;
+        text-align: center;
         width: 100%;
+        .banner-cta--left & {
+            padding: 45px 12px;
+            @include mq($medium-up) {
+                text-align: left;
+            }
+        }
+        .banner-cta--right & {
+            padding: 45px 12px;
+            @include mq($medium-up) {
+                text-align: right;
+            }
+        }
     }
 }

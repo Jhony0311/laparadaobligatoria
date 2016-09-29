@@ -63,8 +63,24 @@ function banners_cpt() {
 }
 
 function products_cpt() {
+    $labels = array(
+        'name'               => 'Productos',
+        'singular_name'      => 'Producto',
+        'menu_name'          => 'Productos',
+        'name_admin_bar'     => 'Producto',
+        'add_new'            => 'Añadir nuevo',
+        'add_new_item'       => 'Añadir producto nuevo',
+        'new_item'           => 'Producto nuevo',
+        'edit_item'          => 'Editar producto',
+        'view_item'          => 'Ver producto',
+        'all_items'          => 'Todos los productos',
+        'search_items'       => 'Buscar productos',
+        'parent_item_colon'  => 'Producto padre:',
+        'not_found'          => 'No se encontraron productos',
+        'not_found_in_trash' => 'No se encontraron productos en la papelera'
+    );
     $args = array(
-        'label' => 'Productos',
+        'labels' => $labels,
         'public' => true,
         'show_ui' => true,
         'publicly_queryable' => true,
@@ -80,6 +96,42 @@ function products_cpt() {
     register_post_type('products', $args);
 }
 
+/**
+ * Register Taxonomies
+ */
+
+function create_product_taxonomy() {
+    $labels = array(
+        'name'              => 'Tipos de producto',
+        'singular_name'     => 'Tipos de producto',
+        'search_items'      => 'Buscar Tipos de productos',
+        'all_items'         => 'Todos los tipos de producto',
+        'parent_item'       => 'Tipo de producto padre',
+        'parent_item_colon' => 'Tipo de producto padre:',
+        'edit_item'         => 'Editar tipo de producto',
+        'update_item'       => 'Actualizar tipo de producto',
+        'add_new_item'      => 'Añadir tipo de producto',
+        'new_item_name'     => 'Nuevo tipo de producto',
+        'menu_name'         => 'Tipos de producto'
+    );
+
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'tipo' ),
+    );
+
+    register_taxonomy( 'product_type', 'products', $args );
+}
+
+/**
+ * Add to init call block
+ */
+
+add_action( 'init', 'create_product_taxonomy', 0 );
 add_action('init', 'testimonials_cpt');
 add_action('init', 'banners_cpt');
 add_action('init', 'products_cpt');
@@ -109,8 +161,18 @@ add_shortcode( 'one_half', 'one_half_shortcode' );
 add_shortcode( 'one_third', 'one_third_shortcode' );
 add_shortcode( 'two_third', 'two_third_shortcode' );
 
+function my_acf_google_map_api( $api ){
+
+    $api['key'] = 'AIzaSyClXtqGBvGe1XjWHGaUt42YjebQ0ZV9F9k';
+
+    return $api;
+
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
 function new_excerpt_more( $more ) {
-	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
+    return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
 

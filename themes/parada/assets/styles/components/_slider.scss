@@ -22,15 +22,21 @@
     }
 }
 .slide {
+    align-items: center;
     float: left;
+    justify-content: center;
     position: relative;
     display: flex;
-    align-items: center;
     position: relative;
-    justify-content: center;
     width: 100%;
     &--full {
         width: 100%;
+    }
+    &--left {
+        align-items: flex-start;
+    }
+    &--right {
+        align-items: flex-end;
     }
     &__image {
         background-size: cover;
@@ -60,9 +66,6 @@
         z-index: 3;
         @include mq($large-up) {
             padding: 0;
-        }
-        &--center {
-
         }
     }
 }

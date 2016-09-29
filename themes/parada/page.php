@@ -3,6 +3,11 @@
     <?php get_template_part('templates/hero-image'); ?>
 <?php endif; ?>
 <!-- /Hero image -->
+<!-- Content -->
+<?php while (have_posts()) : the_post(); ?>
+    <?php get_template_part('templates/content', 'page'); ?>
+<?php endwhile; ?>
+<!-- /Content -->
 <!-- Grid -->
 <?php if( get_field('grid_widget_status') ): ?>
     <div class="content-wrapper">
@@ -146,13 +151,8 @@
     </div>
 <?php endif; ?>
 <!-- /Grid -->
-<!-- Content -->
-<?php while (have_posts()) : the_post(); ?>
-    <?php get_template_part('templates/content', 'page'); ?>
-<?php endwhile; ?>
-<!-- /Content -->
 <!-- Banner block -->
-<?php if( get_field('banner_space') ):
+<?php if( get_field('banner_space') && get_field('banner_status') ):
     $banners = get_field('banner_space');
     foreach( $banners as $banner ):
         setup_postdata($banner);
