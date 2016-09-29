@@ -12,7 +12,7 @@
 <?php endif; ?>
 <!-- /Hero image -->
 <!-- Content -->
-<div class="content-wrapper">
+<div class="grid-widget content-wrapper">
     <?php if(get_field('grid_homepagewidget_status')):
         if (get_field('grid_widget_mainblock')) : ?>
         <div class="row">
@@ -124,7 +124,6 @@
 <?php endif; ?>
 <!-- /Testimony slider -->
 <!-- Banner block -->
-<?php print_r(the_field('banner_status')) ?>
 <?php if( get_field('banner_space') && get_field('banner_status') ):
         $banners = get_field('banner_space');
         foreach( $banners as $banner ):
