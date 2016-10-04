@@ -3,6 +3,9 @@ article.post {
     h1 {
         font-size: 35px;
     }
+    .featured-image {
+        max-width: 100%;
+    }
     time {
         color: $accentColor;
     }
