@@ -28,12 +28,13 @@ add_theme_support( 'custom-logo' );
 
 function testimonials_cpt() {
     $args = array(
-        'label' => 'Testimonials',
+        'label' => 'Testimonios',
         'public' => false,
         'show_ui' => true,
         'publicly_queryable' => true,
         'exclude_from_search' => true,
         'show_in_rest' => true,
+        'menu_position' => 5,
         'menu_icon' => 'dashicons-format-status',
         'supports' => array(
             'title',
@@ -52,6 +53,7 @@ function banners_cpt() {
         'publicly_queryable' => true,
         'exclude_from_search' => true,
         'show_in_rest' => true,
+        'menu_position' => 10,
         'menu_icon' => 'dashicons-grid-view',
         'supports' => array(
             'title',
@@ -60,6 +62,42 @@ function banners_cpt() {
     );
 
     register_post_type('banners', $args);
+}
+
+function recipes_cpt() {
+    $labels = array(
+        'name'               => 'Recetas',
+        'singular_name'      => 'Receta',
+        'menu_name'          => 'Recetas',
+        'name_admin_bar'     => 'Receta',
+        'add_new'            => 'Añadir nueva',
+        'add_new_item'       => 'Añadir nueva receta',
+        'new_item'           => 'Receta nueva',
+        'edit_item'          => 'Editar receta',
+        'view_item'          => 'Ver receta',
+        'all_items'          => 'Todas las recetas',
+        'search_items'       => 'Buscar recetas',
+        'parent_item_colon'  => 'Receta padre:',
+        'not_found'          => 'No se encontraron recetas',
+        'not_found_in_trash' => 'No se encontraron recetas en la papelera'
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'show_ui' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => false,
+        'show_in_rest' => true,
+        'menu_position' => 5,
+        'menu_icon' => 'dashicons-media-document',
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+        )
+    );
+
+    register_post_type('recipes', $args);
 }
 
 function products_cpt() {
@@ -86,6 +124,7 @@ function products_cpt() {
         'publicly_queryable' => true,
         'exclude_from_search' => false,
         'show_in_rest' => true,
+        'menu_position' => 5,
         'menu_icon' => 'dashicons-store',
         'supports' => array(
             'title',
@@ -131,10 +170,11 @@ function create_product_taxonomy() {
  * Add to init call block
  */
 
-add_action( 'init', 'create_product_taxonomy', 0 );
-add_action('init', 'testimonials_cpt');
+add_action('init', 'create_product_taxonomy', 0 );
 add_action('init', 'banners_cpt');
 add_action('init', 'products_cpt');
+add_action('init', 'recipes_cpt');
+add_action('init', 'testimonials_cpt');
 
 /**
  * Add shortcodes
