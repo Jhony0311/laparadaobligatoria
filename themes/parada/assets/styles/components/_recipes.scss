@@ -1,0 +1,46 @@
+// Small recipes preview
+.recipe-prev {
+    box-sizing: border-box;
+    float: left;
+    padding-left: .8125rem;
+    padding-right: .8125rem;
+    width: 100%;
+    @include mq($medium-up) {
+        width: 50%;
+    }
+    &--featured {
+        width: 25%;
+        &__thumb {
+            background-size: cover;
+            background-position: center;
+            float: none;
+            margin-bottom: 5px;
+            padding-top: 100%;
+            width: 100%;
+        }
+        &__title {
+            font-size: 22px;
+            text-transform: uppercase;
+            margin: 5px 0;
+        }
+    }
+    &__thumb,
+    &__detail {
+        float: left;
+        width: 50%;
+    }
+    &__thumb {
+        padding-top: 50%;
+        background-size: cover;
+        background-position: center;
+    }
+    &__detail {
+        p {
+            font-size: 14px;
+        }
+    }
+    &__title {
+        font-size: 25px;
+        text-transform: uppercase;
+    }
+}

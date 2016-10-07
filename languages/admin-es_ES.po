@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2016-08-30 11:26:52+0000\n"
+"PO-Revision-Date: 2016-09-28 18:21:58+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1090,7 +1090,7 @@ msgstr "Deberías recibir esta información de tu proveedor de alojamiento web, 
 #. translators: %s: wp-config.php
 #: wp-admin/setup-config.php:363
 msgid "Sorry, but I can&#8217;t write the %s file."
-msgstr "Lo siento, no pude escribir en el archivo %s."
+msgstr "No se ha podido escribir en el archivo %s."
 
 #. translators: %s: wp-config.php
 #: wp-admin/setup-config.php:367
@@ -3400,7 +3400,7 @@ msgstr "Traducciones para %s"
 #. translators: 1: Site name, 2: WordPress version number.
 #: wp-admin/includes/class-wp-automatic-updater.php:624
 msgid "[%1$s] Your site has updated to WordPress %2$s"
-msgstr "[%1$s] Tu sitio ha sido actualizado a WordPress %2$s"
+msgstr "[%1$s] Tu sitio se ha actualizado a WordPress %2$s"
 
 #. translators: 1: Site name, 2: WordPress version number.
 #: wp-admin/includes/class-wp-automatic-updater.php:630
@@ -3414,7 +3414,7 @@ msgstr "[%1$s] URGENTE: Tu sitio puede no estar funcionando debido a un fallo de
 
 #: wp-admin/includes/class-wp-automatic-updater.php:650
 msgid "Howdy! Your site at %1$s has been updated automatically to WordPress %2$s."
-msgstr "¡Hola! Tu sitio %1$s ha sido actualizado automáticamente a WordPress %2$s."
+msgstr "¡Hola! Tu sitio %1$s se ha actualizado automáticamente a WordPress %2$s."
 
 #: wp-admin/includes/class-wp-automatic-updater.php:653
 msgid "No further action is needed on your part."
@@ -3452,7 +3452,7 @@ msgstr "Por favor comprueba tu sitio ahora. Es posible que todo esté funcionand
 #: wp-admin/includes/class-wp-automatic-updater.php:708
 #: wp-admin/update-core.php:553
 msgid "Keeping your site updated is important for security. It also makes the internet a safer place for you and your readers."
-msgstr "Mantener tu sitio actualizado es importante para la seguridad. También hace que Internet sea un lugar más seguro para ti y tus lectores."
+msgstr "Mantener tu sitio actualizado es importante para la seguridad. También hace que internet sea un lugar más seguro para ti y tus lectores."
 
 #: wp-admin/includes/class-wp-automatic-updater.php:702
 msgid "If you experience any issues or need support, the volunteers in the WordPress.org support forums may be able to help."
@@ -6001,13 +6001,13 @@ msgid ""
 "Please click the following link to activate your user account:\n"
 "%%s"
 msgstr ""
-"Hola,\n"
+"Hola.\n"
 "Has sido invitado a unirte a '%1$s' en\n"
-"%2$s como  %3$s.\n"
-"Si no quieres unirte a este sitio, por favor ignora este correo electrónico\n"
+"%2$s con el perfil de %3$s.\n"
+"Si no quieres unirte a este sitio, por favor, ignora este correo electrónico\n"
 "Esta invitación caducará en unos días.\n"
 "\n"
-"Por favor, haga click en el siguiente enlace para activar su cuenta de usuario:\n"
+"Por favor, haga clic en el siguiente enlace para activar su cuenta de usuario:\n"
 "%%s"
 
 #: wp-admin/includes/theme.php:259
@@ -6035,7 +6035,7 @@ msgstr "Parece que estás usando una versión antigua de %s. Para una mejor expe
 #. translators: %s: browser name and link
 #: wp-admin/includes/dashboard.php:1336
 msgid "It looks like you're using an insecure version of %s. Using an outdated browser makes your computer unsafe. For the best WordPress experience, please update your browser."
-msgstr "Parece que usas una versión insegura de %s. Usar un navegador desactualizado hace a tu ordenador inseguro. Para tener la mejor experiencia en WordPress, por favor actualiza tu navegador."
+msgstr "Parece que usas una versión insegura de %s. Usar un navegador obsoleto hace que tu ordenador sea inseguro. Para tener la mejor experiencia en WordPress, por favor, actualiza tu navegador."
 
 #: wp-admin/includes/nav-menu.php:944
 msgid "There are some invalid menu items. Please check or delete them."
@@ -6890,7 +6890,7 @@ msgstr "<strong>Superior</strong> &mdash; Puedes ordenar tus páginas en jerarqu
 
 #: wp-admin/includes/class-bulk-upgrader-skin.php:47
 msgid "All updates have been completed."
-msgstr "Todas las actualizaciones han sido completadas."
+msgstr "Todas las actualizaciones se han completado."
 
 #: wp-admin/edit-tags.php:257
 msgid "When adding a new tag on this screen, you&#8217;ll fill in the following fields:"
@@ -7426,7 +7426,7 @@ msgstr "El usuario ya existe. No se ha modificado la contraseña."
 #: wp-admin/includes/class-wp-automatic-updater.php:355
 #: wp-admin/includes/update-core.php:1221 wp-admin/update-core.php:501
 msgid "WordPress updated successfully"
-msgstr "WordPress ha sido actualizado con éxito"
+msgstr "WordPress se ha actualizado con éxito"
 
 #: wp-admin/update-core.php:461
 msgid "Update WordPress"
@@ -8693,7 +8693,7 @@ msgstr "Usar siempre https para visitar la administración"
 
 #: wp-admin/user-edit.php:181
 msgid "User updated."
-msgstr "El usuario ha sido actualizado."
+msgstr "El usuario se ha actualizado."
 
 #: wp-admin/user-edit.php:228
 msgid "Personal Options"
@@ -9195,7 +9195,7 @@ msgstr "Eliminado."
 
 #: wp-admin/includes/edit-tag-messages.php:16
 msgid "Item updated."
-msgstr "Actualizado."
+msgstr "Elemento actualizado."
 
 #: wp-admin/includes/edit-tag-messages.php:17
 msgid "Item not added."
@@ -10772,7 +10772,7 @@ msgstr "Guardar está desactivado: %s está ahora mismo editando esta entrada."
 #: wp-admin/includes/ajax-actions.php:1746
 #: wp-admin/includes/edit-tag-messages.php:18
 msgid "Item not updated."
-msgstr "No actualizado."
+msgstr "Elemento no actualizado."
 
 #: wp-admin/includes/ajax-actions.php:1787
 #: wp-admin/includes/class-wp-posts-list-table.php:571
