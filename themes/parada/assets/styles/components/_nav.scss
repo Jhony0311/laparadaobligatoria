@@ -1,0 +1,88 @@
+.navigation {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    &__wrapper {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu-item {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 16px;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:first-child {
+            margin: 0;
+        }
+        &:hover {
+            background-color: $white;
+            a {
+                color: $red;
+            }
+        }
+        &.current-menu-item {
+            a {
+                &::after {
+                    background-color: #fff;
+                    border-radius: 50%;
+                    display: block;
+                    content: " ";
+                    bottom: -8px;
+                    height: 5px;
+                    margin-left: 50%;
+                    left: -2.5px;
+                    position: absolute;
+                    width: 5px;
+                }
+            }
+        }
+        a {
+            color: $white;
+            font-size: 12px;
+            text-decoration: none;
+            position: relative;
+        }
+    }
+    .menu-item-has-children {
+        &.hover {
+            .sub-menu {
+                display: flex;
+                flex-flow: column;
+            }
+        }
+    }
+    .sub-menu {
+        display: none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        .menu-item {
+            display: flex;
+            background-color: $white;
+            padding: 10px 12px;
+            border-bottom: 1px solid $darkGray;
+            text-transform: capitalize;
+            &:hover {
+                background-color: darken($red, 10);
+                a {
+                    color: $white;
+                }
+            }
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+}
