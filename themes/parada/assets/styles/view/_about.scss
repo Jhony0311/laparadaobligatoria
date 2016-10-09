@@ -1,10 +1,12 @@
 .quienes-somos {
-    #main-content {
-        p {
-            font-size: 16px;
-        }
-        img {
-            width: 100%;
+    .container {
+        .content-wrapper {
+            p {
+                font-size: 16px;
+            }
+            img {
+                width: 100%;
+            }
         }
     }
 }

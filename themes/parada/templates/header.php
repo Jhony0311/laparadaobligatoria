@@ -1,6 +1,6 @@
 <header class="header">
     <div class="header__wrapper content-wrapper">
-        <div class="logo" id="logo">
+        <div class="header__logo" id="logo">
             <?php
             if ( function_exists( 'the_custom_logo' ) ) {
                 the_custom_logo();

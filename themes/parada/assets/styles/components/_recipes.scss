@@ -8,8 +8,16 @@
     @include mq($medium-up) {
         width: 50%;
     }
+    &__handle {
+        color: $black;
+        text-decoration: none;
+    }
     &--featured {
         width: 25%;
+        a {
+            color: $black;
+            text-decoration: none;
+        }
         &__thumb {
             background-size: cover;
             background-position: center;
@@ -43,4 +51,16 @@
         font-size: 25px;
         text-transform: uppercase;
     }
+}
+// Featured recipes block
+.featured-recipes {
+    background-color: #f0f0f0;
+    color: $black;
+    padding: 40px 0;
+    margin-bottom: 75px;
+}
+.featured-recipes-title {
+    font-size: 22px;
+    margin: 10px 0 10px;
+    text-transform: uppercase;
 }

@@ -18,14 +18,26 @@
     }
     &__title {
         @include font-style(title);
-        background-color: rgba($black, .7);
-        bottom: 0;
+        // background-color: rgba($black, .7);
+        top: 0;
         color: $white;
         position: absolute;
+        font-size: 50px;
         padding: 5px 0;
-        text-align: center;
         text-transform: uppercase;
         width: 100%;
         z-index: 2;
     }
+}
+.heading,
+.sub-heading {
+    text-align: center;
+    margin: 0;
+}
+.heading {
+    @include font-style(title);
+    font-size: 40px;
+}
+.sub-heading {
+    font-size: 20px;
 }

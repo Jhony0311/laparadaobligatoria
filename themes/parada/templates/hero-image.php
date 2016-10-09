@@ -4,6 +4,6 @@
     <div class="hero__opacity"></div>
     <div class="hero__tt">
         <h1 class="hero__title"><?php the_title(); ?></h1>
-        <h1 class="hero__subtitle"><?php the_field('hero_tagline'); ?></h1>
+        <p class="hero__subtitle"><?php the_field('hero_tagline'); ?></p>
     </div>
 </section>

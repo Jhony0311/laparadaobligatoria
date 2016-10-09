@@ -11,7 +11,7 @@
  * ======================================================================== */
 import $ from 'jquery';
 import jQuery from 'jquery';
-import slick from 'slick-carousel';
+// import slick from 'slick-carousel';
 // import device from './vendors/device';
 
 (function($) {
@@ -61,16 +61,21 @@ import slick from 'slick-carousel';
                 // JavaScript to be fired on all pages
             },
             finalize: function() {
-                // JavaScript to be fired on all pages, after page specific JS is fired
-                $('.slider').slick({
-                    arrows: false,
-                    autoplay: true,
-                    autoplaySpeed: 4000,
-                    dots: true,
-                    draggable: false,
-                    pauseOnFocus: false,
-                    pauseOnHover: false
+                $('.menu-item-has-children').hover(function(){
+                    $(this).addClass('hover');
+                }, function() {
+                    $(this).removeClass('hover');
                 });
+                // JavaScript to be fired on all pages, after page specific JS is fired
+                // $('.slider').slick({
+                //     arrows: false,
+                //     autoplay: true,
+                //     autoplaySpeed: 4000,
+                //     dots: true,
+                //     draggable: false,
+                //     pauseOnFocus: false,
+                //     pauseOnHover: false
+                // });
             }
         },
         // Home page

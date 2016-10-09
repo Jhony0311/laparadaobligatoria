@@ -12,8 +12,12 @@
         align-items: center;
         flex-flow: row wrap;
         justify-content: space-between;
+        height: 100%;
     }
     &__logo {
-        cursor: pointer;
+        max-width: 220px;
+        img {
+            width: 100%;
+        }
     }
 }

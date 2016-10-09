@@ -160,10 +160,37 @@ function create_product_taxonomy() {
         'show_ui'           => true,
         'show_admin_column' => true,
         'query_var'         => true,
-        'rewrite'           => array( 'slug' => 'tipo' ),
+        'rewrite'           => array( 'slug' => 'productos' ),
     );
 
     register_taxonomy( 'product_type', 'products', $args );
+}
+
+function create_recipe_taxonomy() {
+    $labels = array(
+        'name'              => 'Tipos de receta',
+        'singular_name'     => 'Tipos de receta',
+        'search_items'      => 'Buscar Tipos de recetas',
+        'all_items'         => 'Todos los tipos de receta',
+        'parent_item'       => 'Tipo de receta padre',
+        'parent_item_colon' => 'Tipo de receta padre:',
+        'edit_item'         => 'Editar tipo de receta',
+        'update_item'       => 'Actualizar tipo de receta',
+        'add_new_item'      => 'Añadir tipo de receta',
+        'new_item_name'     => 'Nuevo tipo de receta',
+        'menu_name'         => 'Tipos de receta'
+    );
+
+    $args = array(
+        'hierarchical'      => true,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array( 'slug' => 'recetas' ),
+    );
+
+    register_taxonomy( 'recipe_type', 'recipes', $args );
 }
 
 /**
@@ -171,6 +198,7 @@ function create_product_taxonomy() {
  */
 
 add_action('init', 'create_product_taxonomy', 0 );
+add_action('init', 'create_recipe_taxonomy', 0 );
 add_action('init', 'banners_cpt');
 add_action('init', 'products_cpt');
 add_action('init', 'recipes_cpt');
