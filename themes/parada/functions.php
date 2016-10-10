@@ -22,10 +22,10 @@ $sage_includes = [
  */
 add_theme_support( 'custom-logo' );
 
-function new_excerpt_more( $more ) {
+$new_excerpt_more = function ( $more ) {
     return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' .'Leer mas >' . '</a>';
-}
-add_filter( 'excerpt_more', 'new_excerpt_more' );
+};
+add_filter( 'excerpt_more', $new_excerpt_more, 11 );
 
 /**
  * Register post types
