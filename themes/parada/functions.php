@@ -22,6 +22,11 @@ $sage_includes = [
  */
 add_theme_support( 'custom-logo' );
 
+function new_excerpt_more( $more ) {
+    return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' .'Leer mas >' . '</a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+
 /**
  * Register post types
  */
@@ -234,11 +239,6 @@ function my_acf_init() {
 }
 
 add_action('acf/init', 'my_acf_init');
-
-function new_excerpt_more( $more ) {
-    return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
-}
-add_filter( 'excerpt_more', 'new_excerpt_more' );
 
 foreach ($sage_includes as $file) {
   if (!$filepath = locate_template($file)) {

@@ -10,8 +10,9 @@
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
 
-// const device = require('./vendors/device');
-// const slick = require('slick-carousel');
+import $ from 'jquery';
+import jQuery from 'jquery';
+import slick from 'slick-carousel';
 import enquire from 'enquire.js';
 
 (function($) {
@@ -79,7 +80,6 @@ import enquire from 'enquire.js';
                     $(this).removeClass('hover');
                 });
                 $('.navigation').click(function(){
-                    console.log('click nav');
                     if($(window).width() < 1024) {
                         if($(this).hasClass('opened')) {
                             $(this).removeClass('opened');
@@ -96,16 +96,15 @@ import enquire from 'enquire.js';
                     var long = parseFloat($(this).attr('data-long'));
                     createMap(this, lat, long);
                 });
-                // JavaScript to be fired on all pages, after page specific JS is fired
-                // $('.slider').slick({
-                //     arrows: false,
-                //     autoplay: true,
-                //     autoplaySpeed: 4000,
-                //     dots: true,
-                //     draggable: false,
-                //     pauseOnFocus: false,
-                //     pauseOnHover: false
-                // });
+                $('.slider').slick({
+                    arrows: false,
+                    autoplay: true,
+                    autoplaySpeed: 4000,
+                    dots: true,
+                    draggable: false,
+                    pauseOnFocus: false,
+                    pauseOnHover: false
+                });
             }
         },
         // Home page
