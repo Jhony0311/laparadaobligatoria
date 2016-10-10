@@ -21,7 +21,7 @@
             foreach ($block as $b) :
             setup_postdata($b);
             ?>
-            <div class="grid-item columns small-12 medium-8">
+            <div class="grid-item columns small-12 large-8">
                 <div class="grid-item__wrapper">
                     <div class="grid-item__image" style="background-image: url('<?php the_field('hero_image', $b->ID) ?>');"></div>
                     <a href="<?php echo get_permalink($b->ID); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
@@ -36,7 +36,7 @@
             foreach ($block as $b) :
             setup_postdata($b);
             ?>
-            <div class="grid-item columns small-12 medium-4">
+            <div class="grid-item columns small-12 large-4">
                 <div class="grid-item__wrapper">
                     <div class="grid-item__image" style="background-image: url('<?php the_field('hero_image', $b->ID) ?>');"></div>
                     <a href="<?php echo get_permalink($b->ID); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
@@ -55,7 +55,7 @@
                 foreach ($block as $b) :
                 setup_postdata($b);
             ?>
-                <div class="grid-item columns small-12 medium-4">
+                <div class="grid-item columns small-12 large-4">
                     <div class="grid-item__wrapper">
                         <div class="grid-item__image" style="background-image: url('<?php the_field('hero_image', $b->ID) ?>');"></div>
                         <a href="<?php echo get_permalink($b->ID); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
@@ -73,7 +73,7 @@
             foreach ($block as $b) :
             setup_postdata($b);
             ?>
-                <div class="grid-item columns small-12 medium-4">
+                <div class="grid-item columns small-12 large-4">
                     <div class="grid-item__wrapper">
                         <div class="grid-item__image" style="background-image: url('<?php the_field('hero_image', $b->ID) ?>');"></div>
                         <a href="<?php echo get_permalink($b->ID); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
@@ -91,7 +91,7 @@
             foreach ($block as $b) :
             setup_postdata($b);
             ?>
-                <div class="grid-item columns small-12 medium-4">
+                <div class="grid-item columns small-12 large-4">
                     <div class="grid-item__wrapper">
                         <div class="grid-item__image" style="background-image: url('<?php the_field('hero_image', $b->ID) ?>');"></div>
                         <a href="<?php echo get_permalink($b->ID); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>

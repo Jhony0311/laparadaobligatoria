@@ -1,7 +1,7 @@
 .hero {
     display: flex;
     align-items: center;
-    height: 320px;
+    height: 520px;
     margin-bottom: 25px;
     position: relative;
     justify-content: center;
@@ -52,6 +52,7 @@
         margin: 0;
     }
     &__arrow {
+        display: none;
         cursor: pointer;
         position: absolute;
         bottom: 25px;
@@ -63,6 +64,9 @@
         border-top: 20px solid $white;
         width: 0;
         z-index: 3;
+        @include mq($large-up) {
+            display: block;
+        }
     }
     /**
     * Styles only for specific pages

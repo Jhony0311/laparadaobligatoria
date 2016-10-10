@@ -12,6 +12,7 @@
 
 // const device = require('./vendors/device');
 // const slick = require('slick-carousel');
+import enquire from 'enquire.js';
 
 (function($) {
     // The routing fires all common scripts, followed by the page specific scripts.
@@ -77,10 +78,22 @@
                 }, function() {
                     $(this).removeClass('hover');
                 });
+                $('.navigation').click(function(){
+                    console.log('click nav');
+                    if($(window).width() < 1024) {
+                        if($(this).hasClass('opened')) {
+                            $(this).removeClass('opened');
+                        } else {
+                            $(this).addClass('opened');
+                        }
+                    }
+                });
+                enquire.register("screen and (min-width:64em)", function() {
+                    $('.navigation').removeClass('opened');
+                });
                 $('.acf-map').each(function() {
                     var lat = parseFloat($(this).attr('data-lat'));
                     var long = parseFloat($(this).attr('data-long'));
-                    console.log('create map:', lat, long);
                     createMap(this, lat, long);
                 });
                 // JavaScript to be fired on all pages, after page specific JS is fired

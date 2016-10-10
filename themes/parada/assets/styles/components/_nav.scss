@@ -2,15 +2,53 @@
     height: 100%;
     display: flex;
     justify-content: flex-end;
+    &:before {
+        color: $white;
+        font-size: 26px;
+        display: block;
+        font-family: $font-awesome;
+        content: "\f0c9";
+        @include mq($large-up) {
+            display: none;
+        }
+    }
+    &.opened {
+        &:before {
+            content: "\f00d";
+        }
+        .navigation__wrapper {
+            background-color: $primaryColor;
+            text-align: center;
+            display: block;
+            top: 88px;
+            right: 0;
+            width: 100%;
+        }
+        .menu-item {
+            border-bottom: 1px solid $darkGray;
+            &:last-child {
+                border: 0;
+            }
+            a {
+                font-size: 18px;
+            }
+        }
+    }
+    @include mq($medium-up) {
+        width: auto;
+    }
     &__wrapper {
+        display: none;
         list-style: none;
         padding: 0;
         margin: 0;
-        display: flex;
         flex-flow: column;
         justify-content: space-between;
         align-items: center;
-        @include mq($medium-up) {
+        position: absolute;
+        @include mq($large-up) {
+            display: flex;
+            position: static;
             flex-flow: row wrap;
         }
     }
@@ -19,10 +57,17 @@
         display: flex;
         align-items: center;
         height: 100%;
-        padding: 0 16px;
+        padding: 10px 15px;
         position: relative;
         text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
+        @include mq($medium-up) {
+            padding: 0 9px;
+        }
+        @include mq($large-up) {
+            padding: 0 16px;
+        }
         &:first-child {
             margin: 0;
         }
@@ -34,7 +79,7 @@
         }
         &.current-menu-item {
             a {
-                @include mq($medium-up) {
+                @include mq($large-up) {
                     &::after {
                         background-color: #fff;
                         border-radius: 50%;
