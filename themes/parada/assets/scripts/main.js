@@ -72,7 +72,7 @@
                 // JavaScript to be fired on all pages
             },
             finalize: function() {
-                $('.menu-item-has-children').hover(function(){
+                $('html.desktop .menu-item-has-children').hover(function(){
                     $(this).addClass('hover');
                 }, function() {
                     $(this).removeClass('hover');

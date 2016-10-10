@@ -7,9 +7,12 @@
         padding: 0;
         margin: 0;
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: column;
         justify-content: space-between;
         align-items: center;
+        @include mq($medium-up) {
+            flex-flow: row wrap;
+        }
     }
     .menu-item {
         cursor: pointer;
@@ -23,7 +26,7 @@
         &:first-child {
             margin: 0;
         }
-        &:hover {
+        html.desktop &:hover {
             background-color: $white;
             a {
                 color: $red;
@@ -31,17 +34,19 @@
         }
         &.current-menu-item {
             a {
-                &::after {
-                    background-color: #fff;
-                    border-radius: 50%;
-                    display: block;
-                    content: " ";
-                    bottom: -8px;
-                    height: 5px;
-                    margin-left: 50%;
-                    left: -2.5px;
-                    position: absolute;
-                    width: 5px;
+                @include mq($medium-up) {
+                    &::after {
+                        background-color: #fff;
+                        border-radius: 50%;
+                        display: block;
+                        content: " ";
+                        bottom: -8px;
+                        height: 5px;
+                        margin-left: 50%;
+                        left: -2.5px;
+                        position: absolute;
+                        width: 5px;
+                    }
                 }
             }
         }
@@ -53,7 +58,7 @@
         }
     }
     .menu-item-has-children {
-        &.hover {
+        html.desktop &.hover {
             .sub-menu {
                 display: flex;
                 flex-flow: column;
@@ -74,7 +79,7 @@
             padding: 10px 12px;
             border-bottom: 1px solid $darkGray;
             text-transform: capitalize;
-            &:hover {
+            html.desktop &:hover {
                 background-color: darken($red, 10);
                 a {
                     color: $white;

@@ -38,3 +38,4 @@
     </div>
 </footer>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClXtqGBvGe1XjWHGaUt42YjebQ0ZV9F9k"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/device.js/0.2.7/device.min.js"></script>

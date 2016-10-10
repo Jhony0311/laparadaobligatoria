@@ -10,9 +10,12 @@
     &__wrapper {
         display: flex;
         align-items: center;
-        flex-flow: row wrap;
+        flex-flow: column;
         justify-content: space-between;
         height: 100%;
+        @include mq($medium-up) {
+            flex-flow: row wrap;
+        }
     }
     &__logo {
         max-width: 220px;
