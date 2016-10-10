@@ -9,14 +9,25 @@
  * The routing is enclosed within an anonymous function so that you can
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
-import $ from 'jquery';
-import jQuery from 'jquery';
-// import slick from 'slick-carousel';
-// import device from './vendors/device';
+
+// const device = require('./vendors/device');
+// const slick = require('slick-carousel');
 
 (function($) {
     // The routing fires all common scripts, followed by the page specific scripts.
     // Add additional events for more control over timing e.g. a finalize event
+    const createMap = function(target,lat, long) {
+        var map = new google.maps.Map(target, {
+          center: {lat: lat, lng: long},
+          scrollwheel: false,
+          zoom: 15
+        });
+
+        var marker = new google.maps.Marker({
+          map: map,
+          position: {lat: lat, lng: long},
+        });
+    };
     const UTIL = {
         fire: function(func, funcname, args) {
             var fire;
@@ -45,7 +56,7 @@ import jQuery from 'jquery';
         },
         scrollTo(target) {
             $('html, body').animate({
-              scrollTop: target.offset().top - $('header.header').height()
+              scrollTop: (target.offset().top + 100) - $('header.header').height()
             }, 1000);
             return false;
         }
@@ -65,6 +76,12 @@ import jQuery from 'jquery';
                     $(this).addClass('hover');
                 }, function() {
                     $(this).removeClass('hover');
+                });
+                $('.acf-map').each(function() {
+                    var lat = parseFloat($(this).attr('data-lat'));
+                    var long = parseFloat($(this).attr('data-long'));
+                    console.log('create map:', lat, long);
+                    createMap(this, lat, long);
                 });
                 // JavaScript to be fired on all pages, after page specific JS is fired
                 // $('.slider').slick({

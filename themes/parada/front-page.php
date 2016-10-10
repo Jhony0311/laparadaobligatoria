@@ -21,10 +21,25 @@
             foreach ($block as $b) :
             setup_postdata($b);
             ?>
-            <div class="grid-item columns small-12">
+            <div class="grid-item columns small-12 medium-8">
                 <div class="grid-item__wrapper">
                     <div class="grid-item__image" style="background-image: url('<?php the_field('hero_image', $b->ID) ?>');"></div>
-                    <a href="<?php the_permalink(); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
+                    <a href="<?php echo get_permalink($b->ID); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
+                </div>
+            </div>
+            <?php
+            wp_reset_postdata();
+            endforeach;
+            ?>
+            <?php
+            $block = get_field('grid_widget_mainblock_2');
+            foreach ($block as $b) :
+            setup_postdata($b);
+            ?>
+            <div class="grid-item columns small-12 medium-4">
+                <div class="grid-item__wrapper">
+                    <div class="grid-item__image" style="background-image: url('<?php the_field('hero_image', $b->ID) ?>');"></div>
+                    <a href="<?php echo get_permalink($b->ID); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
                 </div>
             </div>
             <?php
@@ -43,7 +58,7 @@
                 <div class="grid-item columns small-12 medium-4">
                     <div class="grid-item__wrapper">
                         <div class="grid-item__image" style="background-image: url('<?php the_field('hero_image', $b->ID) ?>');"></div>
-                        <a href="<?php the_permalink(); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
+                        <a href="<?php echo get_permalink($b->ID); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
                     </div>
                 </div>
                 <?php
@@ -61,7 +76,7 @@
                 <div class="grid-item columns small-12 medium-4">
                     <div class="grid-item__wrapper">
                         <div class="grid-item__image" style="background-image: url('<?php the_field('hero_image', $b->ID) ?>');"></div>
-                        <a href="<?php the_permalink(); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
+                        <a href="<?php echo get_permalink($b->ID); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
                     </div>
                 </div>
                 <?php
@@ -79,7 +94,7 @@
                 <div class="grid-item columns small-12 medium-4">
                     <div class="grid-item__wrapper">
                         <div class="grid-item__image" style="background-image: url('<?php the_field('hero_image', $b->ID) ?>');"></div>
-                        <a href="<?php the_permalink(); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
+                        <a href="<?php echo get_permalink($b->ID); ?>"><div class="grid-item__title"><?php echo $b->post_title ?></div></a>
                     </div>
                 </div>
                 <?php

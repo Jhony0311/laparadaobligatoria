@@ -1,18 +1,44 @@
 input[type="submit"] {
+    cursor: pointer;
     color: $white;
     border: 0;
     background-color: $red;
     border-bottom: 2px solid darken($red , 25);
     outline: none;
-    padding: 0 10px;
+    padding: 5px 10px;
     font-size: 15px;
 }
 input[type="text"],
-input[type="search"] {
+input[type="search"],
+input[type="email"],
+textarea {
+    @include font-style(regular);
+    box-shadow: 0 1px 0 lighten($black, 45) inset;
     background-color: $bones;
     border: 0;
     height: 35px;
     margin: 0;
     outline: none;
-    padding: 0 5px;
+    padding: 0 15px;
+    font-size: 13px;
+    &::placeholder {
+        font-size: 13px;
+        color: $black;
+    }
+}
+
+textarea {
+    height: auto;
+    box-sizing: content-box;
+    padding: 10px 15px;
+}
+
+span.wpcf7-not-valid-tip {
+    margin-top: 5px;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+div.wpcf7-validation-errors {
+    border-color: $primaryColor;
 }

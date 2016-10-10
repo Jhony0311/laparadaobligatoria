@@ -22,8 +22,9 @@
         top: 0;
         color: $white;
         position: absolute;
-        font-size: 50px;
-        padding: 5px 0;
+        font-size: 40px;
+        padding: 5px 10px;
+        word-wrap: break-word;
         text-transform: uppercase;
         width: 100%;
         z-index: 2;
@@ -40,4 +41,5 @@
 }
 .sub-heading {
     font-size: 20px;
+    margin-bottom: 25px;
 }

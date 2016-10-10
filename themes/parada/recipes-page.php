@@ -16,7 +16,7 @@ $args = array(
 $query = new WP_Query( $args );
 ?>
 <div class="featured-recipes">
-    <div class="row">
+    <div class="row small-collapse">
         <div class="small-12 columns">
             <div class="small-12 columns">
                 <h2 class="featured-recipes-title">Las Recetas Obligatorias</h2>

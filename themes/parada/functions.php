@@ -229,15 +229,11 @@ add_shortcode( 'one_half', 'one_half_shortcode' );
 add_shortcode( 'one_third', 'one_third_shortcode' );
 add_shortcode( 'two_third', 'two_third_shortcode' );
 
-function my_acf_google_map_api( $api ){
-
-    $api['key'] = 'AIzaSyClXtqGBvGe1XjWHGaUt42YjebQ0ZV9F9k';
-
-    return $api;
-
+function my_acf_init() {
+    acf_update_setting('google_api_key', 'AIzaSyClXtqGBvGe1XjWHGaUt42YjebQ0ZV9F9k');
 }
 
-add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+add_action('acf/init', 'my_acf_init');
 
 function new_excerpt_more( $more ) {
     return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';

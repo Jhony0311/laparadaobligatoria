@@ -23,7 +23,7 @@
             background-position: center;
             float: none;
             margin-bottom: 5px;
-            padding-top: 100%;
+            padding-top: 85%;
             width: 100%;
         }
         &__title {
@@ -58,8 +58,12 @@
     color: $black;
     padding: 40px 0;
     margin-bottom: 75px;
+    .single-recipes & {
+        margin-bottom: 0;
+    }
 }
 .featured-recipes-title {
+    @include font-style(title);
     font-size: 22px;
     margin: 10px 0 10px;
     text-transform: uppercase;
