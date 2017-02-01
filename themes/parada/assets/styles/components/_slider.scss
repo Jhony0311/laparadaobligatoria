@@ -24,10 +24,11 @@
 .slide {
     align-items: center;
     float: left;
+    flex-flow: column;
     justify-content: center;
     position: relative;
-    display: flex;
-    position: relative;
+    display: flex !important;
+    height: 475px;
     width: 100%;
     &--full {
         width: 100%;
@@ -66,6 +67,32 @@
         z-index: 3;
         @include mq($large-up) {
             padding: 0;
+        }
+    }
+    &__description {
+        @include font-style(thin);
+        font-size: 40px;
+    }
+    &__link {
+        color: $white;
+        text-decoration: none;
+        font-size: 30px;
+    }
+}
+
+.destacado-slider {
+    .slide {
+        &__text {
+            text-align: right;
+            margin: 0 50px;
+            @include mq($medium-up) {
+                margin: 0 200px;
+            }
+        }
+        &__description {
+            p {
+                margin: 15px;
+            }
         }
     }
 }

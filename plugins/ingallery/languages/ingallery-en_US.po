@@ -1,0 +1,456 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: InGallery by Maxiolab\n"
+"POT-Creation-Date: 2016-09-15 17:48+0200\n"
+"PO-Revision-Date: 2016-09-15 19:11+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: controllers/backend.php:16
+msgid "InGallery"
+msgstr "InGallery"
+
+#: controllers/backend.php:38
+msgid "Albums"
+msgstr "Albums"
+
+#: controllers/backend.php:39
+msgid "Layout"
+msgstr "Layout"
+
+#: controllers/backend.php:40
+msgid "Display"
+msgstr "Display"
+
+#: controllers/backend.php:41
+msgid "Colors"
+msgstr "Colors"
+
+#: controllers/backend.php:42
+msgid "New album"
+msgstr "New album"
+
+#: controllers/backend.php:43
+msgid "Album name"
+msgstr "Album name"
+
+#: controllers/backend.php:44
+msgid "Sources"
+msgstr "Sources"
+
+#: controllers/backend.php:45
+msgid ""
+"List of sources to get media from instagram. Can be any combination of "
+"@username, #hashtag or instagram photo URL separated by comma"
+msgstr ""
+"List of sources to get media from instagram. Can be any combination of "
+"@username, #hashtag or instagram photo URL separated by comma"
+
+#: controllers/backend.php:46
+msgid "Filters"
+msgstr "Filters"
+
+#: controllers/backend.php:47
+msgid ""
+"List of filters to filter media from sources by various conditions. Can be "
+"any combination of @username, #hashtag or instagram photo URL separated by "
+"comma"
+msgstr ""
+"List of filters to filter media from sources by various conditions. Can be "
+"any combination of @username, #hashtag or instagram photo URL separated by "
+"comma"
+
+#: controllers/backend.php:48
+msgid "Limit items"
+msgstr "Limit items"
+
+#: controllers/backend.php:49
+msgid ""
+"Limit media items in current album. Set to \"0\" to show all available media"
+msgstr ""
+"Limit media items in current album. Set to \"0\" to show all available media"
+
+#: controllers/backend.php:50
+msgid "Type"
+msgstr "Type"
+
+#: controllers/backend.php:51
+msgid "Columns"
+msgstr "Columns"
+
+#: controllers/backend.php:52
+msgid "Rows"
+msgstr "Rows"
+
+#: controllers/backend.php:53
+msgid "Gutter"
+msgstr "Gutter"
+
+#: controllers/backend.php:54
+msgid "Size in pixels"
+msgstr "Size in pixels"
+
+#: controllers/backend.php:55
+msgid "Style"
+msgstr "Style"
+
+#: controllers/backend.php:56
+msgid "Display mode"
+msgstr "Display mode"
+
+#: controllers/backend.php:57
+msgid "Display on thumbnails"
+msgstr "Display on thumbnails"
+
+#: controllers/backend.php:58
+msgid "Likes counter"
+msgstr "Likes counter"
+
+#: controllers/backend.php:59
+msgid "Comments counter"
+msgstr "Comments counter"
+
+#: controllers/backend.php:60
+msgid "Media description"
+msgstr "Media description"
+
+#: controllers/backend.php:61
+msgid "Display in popup window"
+msgstr "Display in popup window"
+
+#: controllers/backend.php:62
+msgid "Comments"
+msgstr "Comments"
+
+#: controllers/backend.php:63
+msgid "Username"
+msgstr "Username"
+
+#: controllers/backend.php:64
+msgid "Link to instagram profile on user block"
+msgstr "Link to instagram profile on user block"
+
+#: controllers/backend.php:65
+msgid "link to instagram"
+msgstr "link to instagram"
+
+#: controllers/backend.php:66
+msgid "Created date"
+msgstr "Created date"
+
+#: controllers/backend.php:67
+msgid "show in popup window"
+msgstr "show in popup window"
+
+#: controllers/backend.php:68
+msgid "Add filter"
+msgstr "Add filter"
+
+#: controllers/backend.php:69
+msgid "Except"
+msgstr "Except"
+
+#: controllers/backend.php:70
+msgid "Only"
+msgstr "Only"
+
+#: controllers/backend.php:71
+msgid "Add new album"
+msgstr "Add new album"
+
+#: controllers/backend.php:72
+msgid "Cache lifetime"
+msgstr "Cache lifetime"
+
+#: controllers/backend.php:73
+msgid ""
+"Cache lifetime in seconds. Greater cache lifetime means less server load"
+msgstr ""
+"Cache lifetime in seconds. Greater cache lifetime means less server load"
+
+#: controllers/backend.php:74
+msgid "Show albums names"
+msgstr "Show albums names"
+
+#: controllers/backend.php:75
+msgid "Show \"Load more\" button"
+msgstr "Show \"Load more\" button"
+
+#: controllers/backend.php:76
+msgid "Text on a \"Load more\" button"
+msgstr "Text on a \"Load more\" button"
+
+#: controllers/backend.php:77
+msgid "Video plays counter"
+msgstr "Video plays counter"
+
+#: controllers/backend.php:78 controllers/frontend.php:43
+msgid "Sytem error. Please refresh the page and try again"
+msgstr "Sytem error. Please refresh the page and try again"
+
+#: controllers/backend.php:79 controllers/frontend.php:28
+#: controllers/frontend.php:42
+msgid "Unfortunately, an error occurred"
+msgstr "Unfortunately, an error occurred"
+
+#: controllers/backend.php:80
+msgid "Congratulations!"
+msgstr "Congratulations!"
+
+#: controllers/backend.php:81
+msgid "Instagram user block"
+msgstr "Instagram user block"
+
+#: controllers/backend.php:82
+msgid "Popup image size"
+msgstr "Popup image size"
+
+#: controllers/backend.php:83
+msgid ""
+"For smooth viewing experience choose \"try to fit equal size\". But if you "
+"want small images not to be stretched, choose \"use image size\"."
+msgstr ""
+"For smooth viewing experience choose \"try to fit equal size\". But if you "
+"want small images not to be stretched, choose \"use image size\"."
+
+#: controllers/backend.php:84
+msgid "try to fit equal size"
+msgstr "try to fit equal size"
+
+#: controllers/backend.php:85
+msgid "use image size"
+msgstr "use image size"
+
+#: controllers/backend.php:86
+msgid "Loop video"
+msgstr "Loop video"
+
+#: controllers/backend.php:87
+msgid "Album buttons colors"
+msgstr "Album buttons colors"
+
+#: controllers/backend.php:88
+msgid "Gallery background"
+msgstr "Gallery background"
+
+#: controllers/backend.php:89
+msgid "Album button background"
+msgstr "Album button background"
+
+#: controllers/backend.php:90
+msgid "Album button text color"
+msgstr "Album button text color"
+
+#: controllers/backend.php:91
+msgid "Album button background on mouse over"
+msgstr "Album button background on mouse over"
+
+#: controllers/backend.php:92
+msgid "Album button text color on mouse over"
+msgstr "Album button text color on mouse over"
+
+#: controllers/backend.php:93
+msgid "\"Load more\" button background"
+msgstr "\"Load more\" button background"
+
+#: controllers/backend.php:94
+msgid "\"Load more\" button text color"
+msgstr "\"Load more\" button text color"
+
+#: controllers/backend.php:95
+msgid "\"Load more\" button background on mouse over"
+msgstr "\"Load more\" button background on mouse over"
+
+#: controllers/backend.php:96
+msgid "\"Load more\" button text color on mouse over"
+msgstr "\"Load more\" button text color on mouse over"
+
+#: controllers/backend.php:97
+msgid "\"Load more\" button colors"
+msgstr "\"Load more\" button colors"
+
+#: controllers/backend.php:98
+msgid "Thumbnails colors"
+msgstr "Thumbnails colors"
+
+#: controllers/backend.php:99
+msgid "Thumbnails overlay background"
+msgstr "Thumbnails overlay background"
+
+#: controllers/backend.php:100
+msgid "Thumbnails overlay text color"
+msgstr "Thumbnails overlay text color"
+
+#: controllers/backend.php:101
+msgid "Infinite scrolling"
+msgstr "Infinite scrolling"
+
+#: controllers/backend.php:207
+msgid "Gallery successfully saved"
+msgstr "Gallery successfully saved"
+
+#: controllers/backend.php:225
+msgid "Media code is not set"
+msgstr "Media code is not set"
+
+#: controllers/backend.php:230 controllers/backend.php:233
+msgid "No media found"
+msgstr "No media found"
+
+#: controllers/backend.php:260
+msgid "Gallery ID is not set"
+msgstr "Gallery ID is not set"
+
+#: include/helper.php:331
+msgid " ago"
+msgstr " ago"
+
+#: include/model.php:73 include/model.php:305
+msgid "Gallery not found"
+msgstr "Gallery not found"
+
+#: include/model.php:80 include/model.php:312
+msgid "Wrong gallery format"
+msgstr "Wrong gallery format"
+
+#: include/model.php:281
+msgid "Please enter gallery name"
+msgstr "Please enter gallery name"
+
+#: include/model.php:285
+msgid "You need to create at least one album"
+msgstr "You need to create at least one album"
+
+#: include/model.php:290
+msgid "Every album must have a name"
+msgstr "Every album must have a name"
+
+#: include/model.php:294
+msgid "Every album must have at least one source"
+msgstr "Every album must have at least one source"
+
+#: include/model.php:344
+msgid "WP system error"
+msgstr "WP system error"
+
+#: include/table.class.php:20
+msgid "Name"
+msgstr "Name"
+
+#: include/table.class.php:21
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: include/table.class.php:22
+msgid "Author"
+msgstr "Author"
+
+#: include/table.class.php:23
+msgid "Date"
+msgstr "Date"
+
+#: include/table.class.php:39
+msgid "Delete"
+msgstr "Delete"
+
+#: include/table.class.php:137
+#, php-format
+msgid "Edit &#8220;%s&#8221;"
+msgstr "Edit &#8220;%s&#8221;"
+
+#: include/table.class.php:146
+msgid "Edit"
+msgstr "Edit"
+
+#: include/table.class.php:177
+msgid "Y/m/d g:i:s A"
+msgstr "Y/m/d g:i:s A"
+
+#: include/table.class.php:184
+#, php-format
+msgid "%s ago"
+msgstr "%s ago"
+
+#: include/table.class.php:186
+msgid "Y/m/d"
+msgstr "Y/m/d"
+
+#: include/view.php:41
+#, php-format
+msgid "Template \"%s\" for the view \"%s\" not found."
+msgstr "Template \"%s\" for the view \"%s\" not found."
+
+#: tmpl/admin/default.php:10
+msgid "Instagram galleries"
+msgstr "Instagram galleries"
+
+#: tmpl/admin/default.php:11
+msgid "Add New"
+msgstr "Add New"
+
+#: tmpl/admin/default.php:18
+msgid "Search gallery"
+msgstr "Search gallery"
+
+#: tmpl/admin/edit.php:10
+msgid "Edit gallery"
+msgstr "Edit gallery"
+
+#: tmpl/admin/edit.php:13
+msgid "Create gallery"
+msgstr "Create gallery"
+
+#: tmpl/admin/edit.php:30
+msgid "Save & continue edit"
+msgstr "Save & continue edit"
+
+#: tmpl/admin/edit.php:31
+msgid "Save & close"
+msgstr "Save & close"
+
+#: tmpl/admin/edit.php:34
+msgid "Enter gallery name here"
+msgstr "Enter gallery name here"
+
+#: tmpl/admin/edit.php:42
+msgid ""
+"Copy this shortcode and paste it into your post, page, or text widget content"
+msgstr ""
+"Copy this shortcode and paste it into your post, page, or text widget content"
+
+#: tmpl/default.php:23
+msgid "All albums"
+msgstr "All albums"
+
+#: widgets/vc_widget_ingallery.php:12 widgets/wp_widget_ingallery.php:9
+msgid "inGallery"
+msgstr "inGallery"
+
+#: widgets/vc_widget_ingallery.php:13
+msgid "inGallery by Maxio lab."
+msgstr "inGallery by Maxio lab."
+
+#: widgets/vc_widget_ingallery.php:18
+msgid "Media"
+msgstr "Media"
+
+#: widgets/vc_widget_ingallery.php:24 widgets/wp_widget_ingallery.php:37
+msgid "Gallery"
+msgstr "Gallery"
+
+#: widgets/wp_widget_ingallery.php:10
+msgid "Instagram gallery block"
+msgstr "Instagram gallery block"

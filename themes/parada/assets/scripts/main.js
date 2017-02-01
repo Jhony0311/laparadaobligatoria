@@ -105,6 +105,13 @@ import enquire from 'enquire.js';
                     pauseOnFocus: false,
                     pauseOnHover: false
                 });
+                var maxHeight = 0;
+
+                $('.equalize').each(function(){
+                   if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+                });
+
+                $('.equalize').height(maxHeight);
             }
         },
         // Home page

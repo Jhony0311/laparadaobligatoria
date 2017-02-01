@@ -1,0 +1,48 @@
+.tax-product_type {
+    margin: 0;
+    .container {
+        overflow: hidden;
+    }
+}
+
+// Small recipes preview
+.product-prev {
+    box-sizing: border-box;
+    float: left;
+    padding-left: .8125rem;
+    padding-right: .8125rem;
+    margin-bottom: 15px;
+    width: 100%;
+    @include mq($medium-up) {
+        width: 25%;
+    }
+    &__thumb {
+        float: left;
+        width: 100%;
+    }
+    &__thumb {
+        padding-top: 100%;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 10px;
+    }
+    &__title {
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+    .read-more {
+        @include font-style(title);
+        clear: both;
+        color: $black;
+        display: block;
+        font-size: 20px;
+        margin: 15px 0 45px;
+        text-decoration: none;
+        &:hover {
+            color: $primaryColor;
+        }
+        &:visited {
+            color: $primaryColor;
+        }
+    }
+}

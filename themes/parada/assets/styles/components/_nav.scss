@@ -62,6 +62,7 @@
         text-decoration: none;
         text-transform: uppercase;
         text-align: center;
+        transition: .3s all ease-in-out;
         @include mq($medium-up) {
             padding: 0 9px;
         }
@@ -124,6 +125,9 @@
             padding: 10px 12px;
             border-bottom: 1px solid $darkGray;
             text-transform: capitalize;
+            &:after {
+                display: none;
+            }
             html.desktop &:hover {
                 background-color: darken($red, 10);
                 a {

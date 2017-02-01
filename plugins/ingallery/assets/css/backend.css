@@ -1,0 +1,18 @@
+
+#ingalleryBackendWrap{margin:20px 0 30px; position:relative;z-index:99;}
+#ingAppWrap{position:absolute;left:0;top:0;}
+#ingalleryDemoWrap{padding-left:440px;}
+
+#ingalleryApp{width:420px;}
+
+#adminmenu .wp-menu-image{overflow:hidden;}
+#adminmenu .wp-menu-image img{opacity:1;}
+#adminmenu li.menu-top:hover .wp-menu-image img,
+#adminmenu .current .wp-menu-image img{margin-top:-30px;}
+#titlediv #title-prompt-text{pointer-events:none;}
+
+#ing-shade-loading{position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.6);text-align:center;color:#fff;font-size:20px;z-index:995;}
+#ing-shade-loading > i{position:absolute;left:49%;top:45%;}
+
+#ing-shade{position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.6);z-index:996;}
+#ing-shade-box{position:fixed;left:50%;top:40%;width:400px;margin-left:-200px;z-index:997;}

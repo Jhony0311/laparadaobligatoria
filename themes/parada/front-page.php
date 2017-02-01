@@ -106,6 +106,40 @@
     <?php endif; ?>
 </div>
 <!-- /Content -->
+<!-- Destacados slider  -->
+<?php if( get_field('slider_status') ):
+    $slides = get_field('slide');
+?>
+    <div class="slider destacado-slider">
+<?php
+    while ( have_rows('slide') ) : the_row();
+?>
+    <div class="slide slide--full slide--<?php the_sub_field('slide_layout'); ?>">
+        <?php $image = get_sub_field('slide_image'); ?>
+        <div class="slide__image" style="background-image: url('<?php echo $image['url'] ?>')"></div>
+        <div class="slide__text slide__text--center">
+            <div class="slide__copy">
+                <div class="slide__description"><?php the_sub_field('slide_text'); ?></div>
+                <a class="slide__link" href="<?php the_sub_field('slide_link') ?>">Ver mas ></a>
+            </div>
+        </div>
+    </div>
+<?php
+    endwhile;
+?>
+</div>
+<?php endif; ?>
+<!-- /Destacados slider -->
+<!-- Instagram block -->
+<?php if( get_field('instagram_visibility') ): ?>
+    <div class="insta-block">
+        <div class="insta-block__title">Instagram</div>
+        <div class="insta-block__description">Se parte de nosotros subiendo fotos!</div>
+        <div class="insta-block__tag-user"><?php echo get_field('insta_tag_user') ?></div>
+        <div class="insta-block__feed"><?php echo get_field('insta_gallery') ?></div>
+    </div>
+<?php endif; ?>
+<!-- /Instagram block -->
 <!-- Testimony slider  -->
 <?php if( get_field('testimony_list') ):
     $testimonies = get_field('testimony_list');

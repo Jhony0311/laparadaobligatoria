@@ -12,4 +12,19 @@ article.post {
     .entry-content {
         font-size: 14px;
     }
+    .read-more {
+        @include font-style(title);
+        clear: both;
+        color: $black;
+        display: block;
+        font-size: 20px;
+        margin: 15px 0 45px;
+        text-decoration: none;
+        &:hover {
+            color: $primaryColor;
+        }
+        &:visited {
+            color: $primaryColor;
+        }
+    }
 }

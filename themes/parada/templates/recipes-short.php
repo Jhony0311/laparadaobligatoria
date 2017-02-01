@@ -1,7 +1,8 @@
 <article <?php post_class('recipe-prev'); ?>>
     <div class="recipe-prev__detail">
         <a class="recipe-prev__handle" href="<?php echo get_post_permalink() ?>"><h2 class="recipe-prev__title"><?php the_title(); ?></h2></a>
-        <?php the_excerpt(); ?>
+        <p><?php echo custom_excerpt(35); ?></p>
+        <?php echo ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' .'Leer mas >' . '</a>' ?>
     </div>
     <?php if(get_post_thumbnail_id()): ?>
         <?php

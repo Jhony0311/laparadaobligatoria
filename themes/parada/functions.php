@@ -27,6 +27,10 @@ $new_excerpt_more = function ( $more ) {
 };
 add_filter( 'excerpt_more', $new_excerpt_more, 11 );
 
+function custom_excerpt($limit) {
+    return wp_trim_words(get_the_excerpt(), $limit, '...');
+}
+
 /**
  * Register post types
  */
@@ -133,7 +137,8 @@ function products_cpt() {
         'menu_icon' => 'dashicons-store',
         'supports' => array(
             'title',
-            'editor'
+            'editor',
+            'thumbnail'
         )
     );
 
